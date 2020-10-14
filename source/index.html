@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Разработка лендингов. Разработка сайтов">
+    <meta name="discription" content="Разработка недорогих сайтов для вашего бизнеса.">
+
+    <title>Создание сайтов для вашего бизнеса</title>
+    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/rubik-v9-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/lato-v16-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async=""></script>
+  </head>
+
+  <body>
+    <!-- <div style="display:none"> -->
+      <!-- <include src="build/img/sprite.svg"></include> -->
+    <!-- </div> -->
+
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="icon-fase" viewBox="0 0 34 34" fill="CurrentColor">
+        <path d="M33.8636 17C33.8636 7.61259 26.2815 0 16.9318 0C7.58205 0 0 7.61259 0 17C0 26.3874 7.58205 34 16.9318 34C17.0312 34 17.1302 33.9979 17.2294 33.9961V20.7623H13.5917V16.5058H17.2294V13.3736C17.2294 9.74097 19.4381 7.76382 22.6655 7.76382C24.211 7.76382 25.5395 7.87952 25.9268 7.93114V11.7277H23.7013C21.9455 11.7277 21.6055 12.5656 21.6055 13.7949V16.5058H25.8038L25.2566 20.7623H21.6055V33.3432C28.6827 31.3061 33.8636 24.7597 33.8636 17Z"/>
+      </symbol>
+      <symbol id="icon-insta" viewBox="0 0 35 34" fill="CurrentColor">
+        <path d="M20.7351 17C20.7351 18.7971 19.2842 20.2539 17.4943 20.2539C15.7044 20.2539 14.2534 18.7971 14.2534 17C14.2534 15.2029 15.7044 13.7461 17.4943 13.7461C19.2842 13.7461 20.7351 15.2029 20.7351 17Z"/>
+        <path d="M25.0735 11.243C24.9177 10.8191 24.6692 10.4355 24.3462 10.1206C24.0326 9.7963 23.6507 9.54676 23.2283 9.39034C22.8857 9.25675 22.3711 9.09774 21.4231 9.05442C20.3977 9.00747 20.0903 8.99735 17.4943 8.99735C14.898 8.99735 14.5906 9.00721 13.5654 9.05416C12.6175 9.09774 12.1026 9.25675 11.7603 9.39034C11.3379 9.54676 10.9557 9.7963 10.6424 10.1206C10.3194 10.4355 10.0709 10.8189 9.91482 11.243C9.78176 11.5869 9.62339 12.1039 9.58025 13.0557C9.53348 14.085 9.52341 14.3936 9.52341 17.0003C9.52341 19.6068 9.53348 19.9155 9.58025 20.945C9.62339 21.8968 9.78176 22.4135 9.91482 22.7575C10.0709 23.1816 10.3191 23.565 10.6421 23.8799C10.9557 24.2041 11.3376 24.4537 11.76 24.6101C12.1026 24.7439 12.6175 24.9029 13.5654 24.9463C14.5906 24.9932 14.8978 25.0031 17.494 25.0031C20.0905 25.0031 20.398 24.9932 21.4229 24.9463C22.3708 24.9029 22.8857 24.7439 23.2283 24.6101C24.0762 24.2817 24.7464 23.6088 25.0735 22.7575C25.2065 22.4135 25.3649 21.8968 25.4083 20.945C25.4551 19.9155 25.4649 19.6068 25.4649 17.0003C25.4649 14.3936 25.4551 14.085 25.4083 13.0557C25.3652 12.1039 25.2068 11.5869 25.0735 11.243ZM17.4943 22.0127C14.7368 22.0127 12.5015 19.7687 12.5015 17.0001C12.5015 14.2315 14.7368 11.9875 17.4943 11.9875C20.2515 11.9875 22.4868 14.2315 22.4868 17.0001C22.4868 19.7687 20.2515 22.0127 17.4943 22.0127ZM22.6842 12.9607C22.0398 12.9607 21.5174 12.4362 21.5174 11.7893C21.5174 11.1423 22.0398 10.6178 22.6842 10.6178C23.3285 10.6178 23.8509 11.1423 23.8509 11.7893C23.8507 12.4362 23.3285 12.9607 22.6842 12.9607Z"/>
+        <path d="M17.4943 0C8.14455 0 0.5625 7.61259 0.5625 17C0.5625 26.3874 8.14455 34 17.4943 34C26.844 34 34.4261 26.3874 34.4261 17C34.4261 7.61259 26.844 0 17.4943 0ZM27.1582 21.0246C27.1112 22.0637 26.9466 22.7732 26.7063 23.3942C26.2012 24.7055 25.1688 25.742 23.8628 26.2491C23.2446 26.4904 22.5377 26.6554 21.503 26.7028C20.4662 26.7503 20.135 26.7617 17.4945 26.7617C14.8539 26.7617 14.5229 26.7503 13.4859 26.7028C12.4511 26.6554 11.7443 26.4904 11.126 26.2491C10.477 26.004 9.8895 25.6198 9.40379 25.1231C8.90929 24.6357 8.52666 24.0455 8.28251 23.3942C8.04224 22.7735 7.87766 22.0637 7.83064 21.0248C7.78285 19.9836 7.77174 19.6511 7.77174 17C7.77174 14.3489 7.78285 14.0164 7.83038 12.9754C7.8774 11.9363 8.04172 11.2268 8.28199 10.6058C8.52614 9.95445 8.90903 9.36432 9.40379 8.87691C9.88924 8.38016 10.477 7.99599 11.1257 7.75085C11.7443 7.50961 12.4509 7.34464 13.4859 7.29716C14.5226 7.24969 14.8539 7.23828 17.4943 7.23828C20.1347 7.23828 20.4659 7.24969 21.5027 7.29742C22.5377 7.34464 23.2443 7.50961 23.8628 7.7506C24.5116 7.99573 25.0993 8.38016 25.585 8.87691C26.0795 9.36458 26.4624 9.95445 26.7063 10.6058C26.9468 11.2268 27.1112 11.9363 27.1584 12.9754C27.2057 14.0164 27.2168 14.3489 27.2168 17C27.2168 19.6511 27.2057 19.9836 27.1582 21.0246Z"/>
+      </symbol>
+      <symbol id="icon-vk" viewBox="0 0 34 34" fill="CurrentColor">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9884 17C33.9884 26.3888 26.4078 34 17.0567 34C7.70549 34 0.124878 26.3888 0.124878 17C0.124878 7.61116 7.70549 0 17.0567 0C26.4078 0 33.9884 7.61116 33.9884 17ZM17.7462 24.4559H16.4172C16.4172 24.4559 13.485 24.6332 10.9029 21.934C8.08685 18.9899 5.59982 13.1479 5.59982 13.1479C5.59982 13.1479 5.45645 12.7649 5.61219 12.5797C5.78725 12.3715 6.26413 12.3582 6.26413 12.3582L9.44084 12.3373C9.44084 12.3373 9.74025 12.3876 9.95455 12.5455C10.1311 12.6758 10.2301 12.9194 10.2301 12.9194C10.2301 12.9194 10.7435 14.2231 11.4235 15.4025C12.7507 17.705 13.3688 18.2087 13.8194 17.962C14.4759 17.6023 14.2791 14.7071 14.2791 14.7071C14.2791 14.7071 14.2912 13.6561 13.9486 13.1882C13.6833 12.8255 13.1829 12.7197 12.9619 12.69C12.7833 12.6661 13.0766 12.2494 13.4569 12.0624C14.0286 11.7812 15.0382 11.7651 16.231 11.7776C17.1603 11.7869 17.4277 11.8451 17.7911 11.9333C18.6342 12.1377 18.6079 12.7926 18.5512 14.2057C18.5343 14.628 18.5146 15.1179 18.5146 15.6838C18.5146 15.8111 18.5109 15.9468 18.5071 16.0864C18.4874 16.8101 18.4649 17.6387 18.9393 17.9466C19.1825 18.1041 19.7777 17.9702 21.2663 15.4322C21.972 14.2295 22.5011 12.8152 22.5011 12.8152C22.5011 12.8152 22.6167 12.563 22.7963 12.4548C22.9801 12.3445 23.2279 12.3785 23.2279 12.3785L26.5709 12.3576C26.5709 12.3576 27.5754 12.2373 27.7381 12.6924C27.9086 13.1703 27.3626 14.2861 25.9969 16.1138C24.6996 17.8498 24.0693 18.4877 24.1289 19.0528C24.1723 19.4646 24.5819 19.8378 25.3666 20.5691C27.0122 22.1026 27.4508 22.9079 27.555 23.0993C27.5634 23.1147 27.5697 23.1262 27.5742 23.1337C28.3106 24.3598 26.7575 24.4559 26.7575 24.4559L23.7884 24.4974C23.7884 24.4974 23.1503 24.6244 22.3107 24.0453C21.8715 23.7427 21.4422 23.2485 21.0332 22.7777C20.4079 22.0579 19.83 21.3927 19.3368 21.5497C18.5092 21.8134 18.5351 23.6037 18.5351 23.6037C18.5351 23.6037 18.5412 23.9862 18.3525 24.1898C18.1476 24.4116 17.7462 24.4559 17.7462 24.4559Z"/>
+      </symbol>
+    </svg>
+
+    <header class="page-header">
+      <div class="container">
+
+        <div class="page-header__back">
+
+          <picture>
+            <source type="img/webp" media="(min-width:1200px)" srcset="img/mainfoto-desktop@1x.webp 1x, img/mainfoto-desktop@2x.webp 2x">
+            <!-- <source type="img/webp" media="(min-width:768px)" srcset="index-can-tablet@1x.webp 1x, index-can-tablet@2x.webp 2x"> -->
+            <source type="img/webp" srcset="img/mainfoto-mobile@1x.webp 1x, img/mainfoto-mobile@2x.webp 2x">
+
+            <source media="(min-width:1200px)" srcset="img/mainfoto-desktop@1x.png 1x, img/mainfoto-desktop@2x.png 2x">
+            <!-- <source media="(min-width:768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x"> -->
+            <img class="page-header__image" src="img/mainfoto-desktop@1x.png" srcset="img/mainfoto-desktop@2x.png 2x" width="280" height="180" alt="foto">
+          </picture>
+          <picture>
+            <source type="img/webp" media="(min-width:1200px)" srcset="img/light-desktop@1x.webp 1x, img/light-desktop@2x.webp 2x">
+            <!-- <source type="img/webp" media="(min-width:768px)" srcset="index-can-tablet@1x.webp 1x, index-can-tablet@2x.webp 2x"> -->
+            <source type="img/webp" srcset="img/light-mobile@1x.webp 1x, img/light-mobile@2x.webp 2x">
+
+            <source media="(min-width:1200px)" srcset="img/light-desktop@1x.png 1x, img/light-desktop@2x.png 2x">
+            <!-- <source media="(min-width:768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x"> -->
+            <img class="page-header__light" src="img/light-desktop@1x.png" srcset="img/light-desktop@2x.png 2x" width="916" height="692" alt="foto">
+          </picture>
+
+          <img class="page-header__world" src="img/world.svg" width="567" height="303" alt="foto">
+          <img class="page-header__world-paht" src="img/world-paht.svg" width="450" height="180" alt="foto">
+
+        </div>
+
+        <nav class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+          <a class="main-nav__logo">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/logo.svg">
+              <!-- <source media="(min-width:768px)" srcset="img/logo.svg"> -->
+              <img class="page-header__logo-image" src="img/logo.svg" width="192" height="34" alt="grouplogo">
+            </picture>
+          </a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link" href="#ourplus">Наши плюсы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#howwework">Как мы работаем</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#portfolio">Портфолио</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#many">Цены</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="main-nav__list-social">
+            <li class="page-footer__item-social">
+              <a class="page-footer__link" href="#" aria-label="мы в контакте">
+                <svg role="img" class="page-footer__icon-vk" width="34" height="34">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__item-social">
+              <a class="page-footer__link" href="#" aria-label="мы в фейсбуке">
+                <svg role="img" class="page-footer__icon-fase" width="34" height="34">
+                  <use xlink:href="#icon-fase"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__item-social">
+              <a class="page-footer__link" href="#" aria-label="мы в инстаграм">
+                <svg role="img" class="page-footer__icon-insta" width="34" height="34">
+                  <use xlink:href="#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <b class="page-header__title">Сайт<br>для вашего бизнеса</b>
+        <p class="page-header__subtitle">Поможем найти новых клиентов<br> на бескрайних простораx Интернета</p>
+
+        <a class="button button--first button-js" href="form.html">Получить консультацию<span class="button__ellipse"></span></a>
+
+      </div>
+
+    </header>
+
+    <main class="page-main">
+
+      <h1 class="visually-hidden">Создание сайтов, лендингов для вашего бизнеса</h1>
+
+      <section class="questions">
+        <h2 class="visually-hidden">Три вопроса – три ответа по созданию сайта</h2>
+        <div class="container">
+          <ul class="questions__list">
+            <li class="questions__item questions__item--first">
+              <p class="questions__bold questions__bold--first">Решаете, как вести бизнес в условиях всеобщей «удалёнки»?</p>
+            </li>
+            <li class="questions__item questions__item--second">
+              <p class="questions__bold questions__bold--second">Думаете, как найти клиентов?</p>
+            </li>
+            <li class="questions__item questions__item--third">
+              <p class="questions__bold questions__bold--third">Cоздайте свой сайт!</p>
+            </li>
+            <li class="questions__item questions__item--forth">
+              <p class="questions__answer questions__answer--top">Мы сделаем <span style="color: #fd2118; font-weight: 800;">сайт,</span> который нужен именно вам!</p>
+            </li>
+          </ul>
+
+          <a class="button button-js" href="form.html">Узнать подробности<span class="button__ellipse"></span></a>
+        </div>
+      </section>
+
+      <section class="plus" id="ourplus">
+
+        <div class="container">
+          <h2 class="plus__heading">Наши плюсы</h2>
+
+          <ul class="plus__list">
+            <li class="plus__item">
+              <b class="plus__bold">Бесплатный прототип</b>
+              <p class="plus__text">Разрабатываем идею и макет сайта, которые Вы утверждаете. Только после этого начинается оплата.</p>
+            </li>
+            <li class="plus__item plus__item--vo">
+              <b class="plus__bold">Просто и со вкусом</b>
+              <p class="plus__text">Ничего лишнего – каждая деталь дизайна работает на продвижение вашего товара или услуги</p>
+            </li>
+            <li class="plus__item plus__item--adapt">
+              <b class="plus__bold">Адаптивная вёрстка</b>
+              <p class="plus__text">Ваш сайт будет одинаково хорошо смотреться как на компьютере, так и на мобильном телефоне</p>
+            </li>
+            <li class="plus__item plus__item--price">
+              <b class="plus__bold">Разумные цены</b>
+              <p class="plus__text">Мы – команда специалистов, которая работает без посредников</p>
+            </li>
+          </ul>
+
+          <a class="button button-js" href="form.html">Узнать подробности<span class="button__ellipse"></span></a>
+        </div>
+
+      </section>
+
+      <section class="howwork" id="howwework">
+
+        <div class="container">
+          <h2 class="howwork__heading">Как мы  работаем</h2>
+
+          <ul class="howwork__list">
+            <li class="howwork__item">
+              <p class="howwork__text">Вы оставляете заявку</p>
+            </li>
+            <li class="howwork__item howwork__item--second">
+              <p class="howwork__text">Мы созваниваемся с Вами и консультируем Вас, опираясь на специфику Вашего бизнеса</p>
+            </li>
+            <li class="howwork__item howwork__item--third">
+              <p class="howwork__text">Мы создаём прототип, в который Вы вносите все необходимые  коррективы</p>
+            </li>
+            <li class="howwork__item howwork__item--forth">
+              <p class="howwork__text">После утверждения прототипа Вы вносите предоплату 50%</p>
+            </li>
+            <li class="howwork__item howwork__item--fifth">
+              <p class="howwork__text">Мы делаем сайт полностью, вносим необходимые правки</p>
+            </li>
+            <li class="howwork__item howwork__item--sixth">
+              <p class="howwork__text">Вы оплачиваете оставшуюся стоимость, а мы высылаем Вам все исходники</p>
+            </li>
+          </ul>
+
+          <a class="button button-js" href="form.html">Оставить заявку<span class="button__ellipse"></span></a>
+
+        </div>
+
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+
+          <h2 class="portfolio__heading">Наше портфолио</h2>
+
+          <ul class="portfolio__list" id="slides">
+
+            <li class="portfolio__item slide showing">
+              <a class="portfolio__link" aria-label="пример работы сайта магазина для котов">
+                <picture>
+                  <source type="img/webp" media="(min-width:1200px)" srcset="img/portfolio-1-desktop@1x.webp 1x, img/portfolio-1-desktop@2x.webp 2x">
+                  <source type="img/webp" srcset="img/portfolio-1-desktop@1x.webp 1x, img/portfolio-1-desktop@2x.webp 2x">
+
+                  <source media="(min-width:1200px)" srcset="img/portfolio-1-desktop@1x.png 1x, img/portfolio-1-desktop@2x.png 2x">
+                  <img class="portfolio__image" src="img/portfolio-1-desktop@1x.png" srcset="img/portfolio-1-desktop@2x.png 2x" width="320" height="270" alt="portfoilio-photo">
+                </picture>
+              </a>
+            </li>
+
+            <li class="portfolio__item slide">
+              <a class="portfolio__link" href="https://ramlider.ru/" aria-label="пример работы сайта юридической организации «Лидер»">
+                <picture>
+                  <source type="img/webp" media="(min-width:1200px)" srcset="img/portfolio-21-desktop@1x.webp 1x, img/portfolio-2-desktop@2x.webp 2x">
+                  <source type="img/webp" srcset="img/portfolio-2-desktop@1x.webp 1x, img/portfolio-2-desktop@2x.webp 2x">
+
+                  <source media="(min-width:1200px)" srcset="img/portfolio-2-desktop@1x.png 1x, img/portfolio-2-desktop@2x.png 2x">
+                  <img class="portfolio__image" src="img/portfolio-2-desktop@1x.png" srcset="img/portfolio-2-desktop@2x.png 2x" width="320" height="270" alt="portfoilio-photo">
+                </picture>
+              </a>
+            </li>
+
+            <li class="portfolio__item slide">
+              <a class="portfolio__link" aria-label="пример работы сайта магазина для сада и огорода">
+                <picture>
+                  <source type="img/webp" media="(min-width:1200px)" srcset="img/portfolio-3-desktop@1x.webp 1x, img/portfolio-3-desktop@2x.webp 2x">
+                  <source type="img/webp" srcset="img/portfolio-3-desktop@1x.webp 1x, img/portfolio-3-desktop@2x.webp 2x">
+
+                  <source media="(min-width:1200px)" srcset="img/portfolio-3-desktop@1x.png 1x, img/portfolio-3-desktop@2x.png 2x">
+                  <img class="portfolio__image" src="img/portfolio-3-desktop@1x.png" srcset="img/portfolio-3-desktop@2x.png 2x" width="320" height="270" alt="portfoilio-photo">
+                </picture>
+              </a>
+            </li>
+
+            <li class="portfolio__item slide">
+              <a class="portfolio__link" aria-label="пример работы сайта отеля Season">
+                <picture>
+                  <source type="img/webp" media="(min-width:1200px)" srcset="img/portfolio-4-desktop@1x.webp 1x, img/portfolio-4-desktop@2x.webp 2x">
+                  <source type="img/webp" srcset="img/portfolio-4-desktop@1x.webp 1x, img/portfolio-4-desktop@2x.webp 2x">
+
+                  <source media="(min-width:1200px)" srcset="img/portfolio-4-desktop@1x.png 1x, img/portfolio-4-desktop@2x.png 2x">
+                  <img class="portfolio__image" src="img/portfolio-4-desktop@1x.png" srcset="img/portfolio-4-desktop@2x.png 2x" width="320" height="270" alt="portfoilio-photo">
+                </picture>
+              </a>
+            </li>
+
+            <li class="portfolio__item slide">
+              <a class="portfolio__link">
+                <picture>
+                  <source type="img/webp" media="(min-width:1200px)" srcset="img/portfolio-5-desktop@1x.webp 1x, img/portfolio-5-desktop@2x.webp 2x">
+                  <source type="img/webp" srcset="img/portfolio-5-desktop@1x.webp 1x, img/portfolio-5-desktop@2x.webp 2x">
+
+                  <source media="(min-width:1200px)" srcset="img/portfolio-5-desktop@1x.png 1x, img/portfolio-5-desktop@2x.png 2x">
+                  <img class="portfolio__image" src="img/portfolio-5-desktop@1x.png" srcset="img/portfolio-5-desktop@2x.png 2x" width="320" height="270" alt="portfoilio-photo">
+                </picture>
+              </a>
+            </li>
+
+            <li class="portfolio__item slide">
+              <a class="portfolio__link" aria-label="пример работы сайта строительной организации">
+                <picture>
+                  <source type="img/webp" media="(min-width:1200px)" srcset="img/portfolio-6-desktop@1x.webp 1x, img/portfolio-6-desktop@2x.webp 2x">
+                  <source type="img/webp" srcset="img/portfolio-6-desktop@1x.webp 1x, img/portfolio-6-desktop@2x.webp 2x">
+
+                  <source media="(min-width:1200px)" srcset="img/portfolio-6-desktop@1x.png 1x, img/portfolio-6-desktop@2x.png 2x">
+                  <img class="portfolio__image" src="img/portfolio-6-desktop@1x.png" srcset="img/portfolio-6-desktop@2x.png 2x" width="320" height="270" alt="portfoilio-photo">
+                </picture>
+              </a>
+            </li>
+
+          </ul>
+
+          <button class="portfolio__controls" id="previous" aria-label="Предыдущий слайд"></button>
+          <button class="portfolio__controls" id="pause" aria-label="Отключить-Включить слайдшоу"><span class="portfolio__pause-text" id="pause-text"></span></button>
+          <button class="portfolio__controls" id="next" aria-label="Следующий слайд"></button>
+
+        </div>
+      </section>
+
+      <section class="price" id="many">
+
+        <div class="container">
+          <h2 class="price__heading">Наши цены</h2>
+
+          <ul class="price__list">
+
+            <li class="price__item">
+              <p class="price__text">Сайт (дизайн + вёрстка)</p>
+              <p class="price__text">от <span class="price__number">4 900</span> /руб</p>
+            </li>
+
+            <li class="price__item">
+              <p class="price__text">Текст (если нужен)</p>
+              <p class="price__text">от <span class="price__number">1 900</span> /руб</p>
+            </li>
+
+            <li class="price__item">
+              <p class="price__text">Домен и Хостинг</p>
+              <p class="price__text">от <span class="price__number">900</span> /руб</p>
+            </li>
+
+          </ul>
+
+          <a class="button button-js" href="form.html">Узнать подробности<span class="button__ellipse"></span></a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="page-footer__wrapper">
+
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#ourplus">Наши плюсы</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#howwework">Как мы работаем</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#portfolio">Портфолио</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#many">Цены</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="page-footer__list page-footer__list--all">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="mailto:tk000@yandex.ru" id="contacts">E-mail: tk000@yandex.ru</a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link"><br></a>
+            </li>
+            <li class="page-footer__item">
+              <em class="page-footer__text page-footer__adress">Наш адрес: Московская область, г. Жуковский</em>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link"><br></a>
+            </li>
+            <li class="page-footer__item">
+              <p class="page-footer__text page-footer__link--all">&#169; 2020 Все права защищены</p>
+            </li>
+          </ul>
+
+          <div class="page-footer__list">
+            <a class="page-footer__logo">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/logo.svg">
+                <!-- <source media="(min-width:768px)" srcset="img/logo.svg"> -->
+                <img class="page-header__logo-image" src="img/logo.svg" width="194" height="44" alt="grouplogo">
+              </picture>
+            </a>
+            <ul class="page-footer__list-social">
+              <li class="page-footer__item-social">
+                <a class="page-footer__link" aria-label="мы в контакте">
+                  <svg role="img" class="page-footer__icon-vk" width="34" height="34">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__item-social">
+                <a class="page-footer__link" href="#" aria-label="мы в фейсбуке">
+                  <svg role="img" class="page-footer__icon-fase" width="34" height="34">
+                    <use xlink:href="#icon-fase"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__item-social">
+                <a class="page-footer__link" href="#" aria-label="мы в инстаграм">
+                  <svg role="img" class="page-footer__icon-insta" width="34" height="34">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <section class="popup" style="display: none;">
+      <h2 class="popup__heading">Какой сайт вас интересует?</h2>
+      <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
+      <form class="popup__form" method="POST" enctype="multipart/form-data" autocomplete="off" action="php/order.php">
+        <fieldset class="popup__element-radio">
+          <label class="popup__title" for="none">
+            <input class="visually-hidden" type="radio" id="none" name="site" checked="" value="Пока не знаю">
+            <span class="popup__radio-indicator"></span>
+            Пока не знаю
+          </label>
+          <label class="popup__title" for="viz">
+            <input class="visually-hidden" type="radio" id="viz" name="site" value="Сайт-визитка">
+            <span class="popup__radio-indicator"></span>
+            Сайт-визитка
+          </label>
+          <label class="popup__title" for="corp">
+            <input class="visually-hidden" type="radio" id="corp" name="site" value="Корпоративный сайт">
+            <span class="popup__radio-indicator"></span>
+            Корпоративный сайт
+          </label>
+          <label class="popup__title" for="lend">
+            <input class="visually-hidden" type="radio" id="lend" name="site" value="Лендинг">
+            <span class="popup__radio-indicator"></span>
+            Лендинг
+          </label>
+          <label class="popup__title" for="shop">
+            <input class="visually-hidden" type="radio" id="shop" name="site" value="Интренет-магазин">
+            <span class="popup__radio-indicator"></span>
+            Интернет-магазин
+          </label>
+        </fieldset>
+
+        <fieldset class="popup__element">
+          <label class="visually-hidden" for="yourname"></label>
+          <input class="popup__input" id="yourname" name="yourname" type="text" placeholder="Ваше имя">
+
+          <label class="visually-hidden" for="phone"></label>
+          <input class="popup__input" id="phone" name="phone" type="tel" placeholder="Телефон">
+
+          <label class="visually-hidden" for="mail"></label>
+          <input class="popup__input" id="mail" name="mail" type="email" placeholder="Электронная почта" required="">
+        </fieldset>
+
+        <fieldset class="popup__element-area">
+          <!-- <label class="visually-hidden" for="address"></label> -->
+          <textarea class="popup__input" id="letter" name="letter" placeholder="Несколько слов о проекте"></textarea>
+        </fieldset>
+
+        <fieldset class="popup__element">
+          <button class="button" type="submit">Отправить заявку</button>
+          <button class="popup__reset" type="reset">очистить форму</button>
+        </fieldset>
+      </form>
+    </section>
+    <span class="arrow" style="display: none;"></span>
+
+    <div class="error">
+      <p class="error__message">Ошибка загрузки объявления</p>
+      <button class="error__button">Попробовать снова</button>
+    </div>
+
+    <script src="js/popup.min.js"></script>
+    <script src="js/slider.min.js"></script>
+
+  </body>
+</html>

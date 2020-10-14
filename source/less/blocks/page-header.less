@@ -1,0 +1,266 @@
+.page-header {
+  min-width: 320px;
+
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.page-header__back {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+   &::after {
+    position: absolute;
+
+    left: -55%;
+    top: -130px;
+    z-index: 1;
+
+    content: "";
+
+    width: 140%;
+    height: 475px;
+
+    background: linear-gradient(180deg, @blue 0%, @blue-two 100%);
+    border-radius: 119px;
+    transform: rotate(-12.92deg);
+  }
+}
+
+.page-header__image {
+  display: none;
+}
+
+.page-header__light {
+  display: none;
+}
+
+.page-header__world {
+  display: block;
+
+  position: absolute;
+  right: calc(50% - 70px);
+  top: 250px;
+  z-index: 2;
+
+  width: 141px;
+  height: 81px;
+}
+
+.page-header__world-paht {
+  display: none;
+}
+
+.page-header__navigation {
+  display: block;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  width: 100%;
+
+  align-items: center;
+}
+
+.page-header__subtitle {
+  position: relative;
+  z-index: 10;
+
+  width: auto;
+
+  margin-top: 16px;
+  padding: 0 10%;
+
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.013em;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: @white;
+}
+
+.page-header__subtitle br {
+  display: none;
+}
+
+.page-header__title {
+  position: relative;
+  z-index: 10;
+
+  display: block;
+
+  width: auto;
+
+  margin-top: 20px;
+  padding: 0 20px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: @white;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding-bottom: 128px;
+    padding-top: 20px;
+
+    text-align: left;
+
+    margin: 0 auto;
+  }
+
+  .page-header__back {
+    position: relative;
+
+    &::after {
+      position: absolute;
+
+      left: -100px;
+      top: -194px;
+      z-index: -1;
+
+      content: "";
+
+      width: 1200px;
+      height: 770px;
+
+      background: linear-gradient(180deg, #0e0c6a 0%, #555483 100%);
+      border-radius: 119px;
+      transform: rotate(-6.6deg);
+    }
+
+    &::before {
+      position: absolute;
+
+      left: -150px;
+      top: -194px;
+      z-index: 1;
+
+      content: "";
+
+      width: 120px;
+      height: 800px;
+
+      background-color: @white;
+    }
+  }
+
+  .page-header__image {
+    display: block;
+
+    position: absolute;
+    right: -20px;
+    top: 230px;
+    z-index: 1;
+
+    width: 562px;
+    height: 321px;
+  }
+
+  .page-header__light {
+    display: block;
+
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    z-index: 2;
+
+    width: 916px;
+    height: 692px;
+
+    opacity: 0.9;
+  }
+
+  .page-header__world {
+    display: block;
+
+    position: absolute;
+    right: -20px;
+    top: 0;
+    z-index: 2;
+
+    width: 700px;
+    height: 500px;
+  }
+
+  .page-header__world-paht {
+    display: block;
+
+    position: absolute;
+    right: 140px;
+    top: 130px;
+    z-index: 2;
+
+    width: 400px;
+    height: auto;
+  }
+
+  .page-header__navigation {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    width: 100%;
+    // padding-right: 340px;
+    margin-top: 42px;
+
+    align-items: center;
+  }
+
+  .page-header__subtitle {
+    width: 600px;
+
+    margin-left: 99px;
+    margin-top: 16px;
+    padding: 0;
+
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.013em;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: @white;
+  }
+
+  .page-header__subtitle br {
+    display: block;
+  }
+
+  .page-header__title {
+    position: relative;
+    z-index: 10;
+
+    display: block;
+
+    width: 450px;
+
+    padding: 0;
+    margin-left: 99px;
+    margin-top: 62px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: @white;
+  }
+}

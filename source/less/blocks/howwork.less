@@ -1,0 +1,162 @@
+.howwork {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  text-align: center;
+
+  background: repeating-linear-gradient(-90deg, lighten(@blue-two, 82%), lighten(@blue-two, 82%) 10px, lighten(@blue, 92%) 10px, lighten(@blue, 92%) 20px);
+}
+
+.howwork__heading {
+  margin-bottom: 40px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1.2;
+
+  text-align: center;
+
+  color: @blue-two;
+  opacity: 0.8;
+}
+
+.howwork__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding: 0 20px;
+  margin-bottom: 30px;
+
+  text-align: center;
+  line-height: inherit;
+
+  &::before {
+    display: none;
+  }
+}
+
+.howwork__item {
+  position: relative;
+
+  width: 100%;
+  min-height: 100px;
+
+
+  &::after {
+    position: absolute;
+    left: calc(50% - 35px);
+    top: -40px;
+
+    content: "1";
+
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 112px;
+    line-height: 137px;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #2D2C75;
+
+    opacity: 0.08;
+  }
+}
+
+.howwork__item--second {
+  &::after {
+    content: "2";
+  }
+}
+
+.howwork__item--third {
+  &::after {
+    content: "3";
+  }
+}
+
+.howwork__item--forth {
+  &::after {
+    content: "4";
+  }
+}
+
+.howwork__item--fifth {
+  &::after {
+    content: "5";
+  }
+}
+
+.howwork__item--sixth {
+  &::after {
+    content: "6";
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .howwork {
+    padding-top: 75px;
+  }
+
+  .howwork__heading {
+    margin-bottom: 166px;
+
+    font-size: 40px;
+    line-height: 0.8;
+  }
+
+  .howwork__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    position: relative;
+
+    padding: 0 99px;
+    margin-bottom: 30px;
+
+    text-align: left;
+    line-height: inherit;
+
+    &::before {
+      display: block;
+
+      position: absolute;
+      left: 170px;
+      top: -150px;
+
+      content: "";
+
+      width: 841px;
+      height: 420px;
+
+      background-image: url("../img/line-color.svg");
+      background-size: cover;
+    }
+  }
+
+  .howwork__item {
+    position: relative;
+
+    width: 198px;
+    min-height: 130px;
+
+    &:not(:nth-last-child(-n+3)) {
+      margin-bottom: 110px;
+    }
+
+    &:not(:nth-child(3n)) {
+      margin-right: 198px;
+    }
+
+    &::after {
+      left: 0;
+      top: -130px;
+    }
+  }
+}
