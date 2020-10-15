@@ -2,19 +2,11 @@
 @import "variables.less";
 @import "mixins.less";
 @import "blocks/page-header.less";
-@import "blocks/main-nav.less";
-@import "blocks/page-footer.less";
-@import "blocks/price.less";
-@import "blocks/portfolio.less";
-@import "blocks/howwork.less";
-@import "blocks/plus.less";
-@import "blocks/questions.less";
-@import "blocks/popup.less";
-@import "blocks/slider.less";
+// @import "blocks/main-nav.less";
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   .mapa();
@@ -25,32 +17,25 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 28px;
+  letter-spacing: -0.466667px;
 
-  // overflow-x: hidden;
-  // overflow-y: scroll;
-  // scroll-behavior: smooth;
-
-  color: @text;
+  color: fade(@gray, 70%);
 }
 
 * {
   .mapa();
-
   box-sizing: border-box;
 }
 
 li {
-  position: relative;
-  z-index: 10;
-
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
 
-  color: @black;
+  color: @gray;
 }
 
 .visually-hidden {
@@ -69,131 +54,42 @@ a {
 }
 
 .button {
-  margin: 0 auto;
-
-  border: none;
-
-  position: relative;
-  z-index: 10;
-
-  min-width: 250px;
-
-  padding: 18px 70px 19px 24px;
-  margin-top: 5px;
-
-  border-radius: 65px;
-
-  background: linear-gradient(180deg, @red 0%, @orange 100%);
-  border-radius: 65px;
-  color: @white;
-
   display: inline-block;
   vertical-align: top;
 
-  font-family: "Rubik", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
+  position: relative;
+
+  padding: 30px 180px 30px 40px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background-color: @red;
+  color: @white;
 
   &::after {
     position: absolute;
-    right: 10px;
-    top: 7px;
+    right: 40px;
+    top: calc(50% - 7px);
     z-index: 2;
 
     content: "";
 
-    width: 43px;
-    height: 43px;
+    width: 14px;
+    height: 14px;
 
-    border-radius: 50%;
-
-    background-color: darken(@red, 15%);
-    background-image: url("../img/arrow.svg");
+    background-image: url("../img/icon-arrow-down.svg");
     background-repeat: no-repeat;
     background-position: center center;
-
-    transition: 0.3s ease-out;
   }
-
-  &::before {
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    z-index: 3;
-
-    content: "";
-
-    border-radius: 65px;
-
-    width: 102%;
-    height: 110%;
-
-    border: 2px solid fade(@red, 50%);
-
-    transition: 0.3s ease-out;
-  }
-}
-
-.button--first {
-  margin-top: 80px;
-}
-
-.button__ellipse {
-  display: none;
-
-  position: absolute;
-  top: -58px;
-  right: -50px;
-  z-index: -1;
-
-  width: 162px;
-  height: 172px;
-
-  background-image: url("../img/ellipse.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  transition: 0.4s ease-out
 }
 
 // * {
 //   outline: solid 1px red;
 // }
-
-.button:hover {
-  background: linear-gradient(180deg, @orange 0%, @red 100%);
-  color: rgba(255, 255, 255, 0.6);
-
-  transition: 0.4s ease-out;
-
-  &::after {
-    background-color: darken(@red, 25%);
-
-    transition: 0.4s ease-out;
-    right: 9px;
-  }
-
-  &::before {
-    opacity: 0.5;
-    transition: 0.4s ease-out;
-  }
-}
-
-.button:hover .button__ellipse {
-  transform: rotate(180deg);
-
-  transition: 0.4s ease-out;
-}
-
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 0.5;
-
-  transform: translateY(2px);
-
-  box-shadow: 0 0 10px @orange;
-}
 
 @media (min-width: @tablet-width) {
   .container {

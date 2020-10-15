@@ -3,17 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Разработка лендингов. Разработка сайтов">
-    <meta name="discription" content="Разработка недорогих сайтов для вашего бизнеса.">
+    <meta name="keywords" content="Путешествие по Европе. Евротур">
+    <meta name="discription" content="Путешествие по Европе">
 
-    <title>Создание сайтов для вашего бизнеса</title>
-    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Путешествие по Европе</title>
+
     <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/rubik-v9-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/lato-v16-latin-900.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
@@ -45,117 +42,58 @@
     <header class="page-header">
       <div class="container">
 
-        <div class="page-header__back">
+        <div class="page-header__wrapper">
 
           <picture>
-            <source type="img/webp" media="(min-width:1200px)" srcset="img/mainfoto-desktop@1x.webp 1x, img/mainfoto-desktop@2x.webp 2x">
-            <!-- <source type="img/webp" media="(min-width:768px)" srcset="index-can-tablet@1x.webp 1x, index-can-tablet@2x.webp 2x"> -->
-            <source type="img/webp" srcset="img/mainfoto-mobile@1x.webp 1x, img/mainfoto-mobile@2x.webp 2x">
-
-            <source media="(min-width:1200px)" srcset="img/mainfoto-desktop@1x.png 1x, img/mainfoto-desktop@2x.png 2x">
-            <!-- <source media="(min-width:768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x"> -->
-            <img class="page-header__image" src="img/mainfoto-desktop@1x.png" srcset="img/mainfoto-desktop@2x.png 2x" width="280" height="180" alt="foto">
-          </picture>
-          <picture>
-            <source type="img/webp" media="(min-width:1200px)" srcset="img/light-desktop@1x.webp 1x, img/light-desktop@2x.webp 2x">
-            <!-- <source type="img/webp" media="(min-width:768px)" srcset="index-can-tablet@1x.webp 1x, index-can-tablet@2x.webp 2x"> -->
-            <source type="img/webp" srcset="img/light-mobile@1x.webp 1x, img/light-mobile@2x.webp 2x">
-
-            <source media="(min-width:1200px)" srcset="img/light-desktop@1x.png 1x, img/light-desktop@2x.png 2x">
-            <!-- <source media="(min-width:768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x"> -->
-            <img class="page-header__light" src="img/light-desktop@1x.png" srcset="img/light-desktop@2x.png 2x" width="916" height="692" alt="foto">
+            <source media="(min-width:1200px)" srcset="img/logo.svg">
+            <source media="(min-width:768px)" srcset="img/logo.svg">
+            <img class="page-header__logo" src="img/logo.svg" width="57" height="22" alt="логотип">
           </picture>
 
-          <img class="page-header__world" src="img/world.svg" width="567" height="303" alt="foto">
-          <img class="page-header__world-paht" src="img/world-paht.svg" width="450" height="180" alt="foto">
+          <nav class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+
+            <ul class="page-header__list">
+              <li class="page-header__item page-header__item--active">
+                <a class="page-header__link" href="#ourplus">О путешествии</a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--red" href="#price">Цены</a>
+              </li>
+            </ul>
+
+          </nav>
+
+          <ul class="page-header__contact-list">
+            <li class="page-header__contact-item">
+              <a class="page-header__contact-link" href="tel:+749978468446">+7 (499) 784-684-46</a>
+            </li>
+          </ul>
 
         </div>
 
-        <nav class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-          <a class="main-nav__logo">
-            <picture>
-              <source media="(min-width:1200px)" srcset="img/logo.svg">
-              <!-- <source media="(min-width:768px)" srcset="img/logo.svg"> -->
-              <img class="page-header__logo-image" src="img/logo.svg" width="192" height="34" alt="grouplogo">
-            </picture>
-          </a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link" href="#ourplus">Наши плюсы</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#howwework">Как мы работаем</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#portfolio">Портфолио</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#many">Цены</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-
-          <ul class="main-nav__list-social">
-            <li class="page-footer__item-social">
-              <a class="page-footer__link" href="#" aria-label="мы в контакте">
-                <svg role="img" class="page-footer__icon-vk" width="34" height="34">
-                  <use xlink:href="#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__item-social">
-              <a class="page-footer__link" href="#" aria-label="мы в фейсбуке">
-                <svg role="img" class="page-footer__icon-fase" width="34" height="34">
-                  <use xlink:href="#icon-fase"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__item-social">
-              <a class="page-footer__link" href="#" aria-label="мы в инстаграм">
-                <svg role="img" class="page-footer__icon-insta" width="34" height="34">
-                  <use xlink:href="#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-
-        </nav>
-
-        <b class="page-header__title">Сайт<br>для вашего бизнеса</b>
-        <p class="page-header__subtitle">Поможем найти новых клиентов<br> на бескрайних простораx Интернета</p>
-
-        <a class="button button--first button-js" href="form.html">Получить консультацию<span class="button__ellipse"></span></a>
-
       </div>
-
     </header>
 
     <main class="page-main">
 
-      <h1 class="visually-hidden">Создание сайтов, лендингов для вашего бизнеса</h1>
+<!--        <picture>
+            <source type="img/webp" media="(min-width:1200px)" srcset="img/mainfoto-desktop@1x.webp 1x, img/mainfoto-desktop@2x.webp 2x">
+            <source type="img/webp" media="(min-width:768px)" srcset="index-can-tablet@1x.webp 1x, index-can-tablet@2x.webp 2x">
+            <source type="img/webp" srcset="img/mainfoto-mobile@1x.webp 1x, img/mainfoto-mobile@2x.webp 2x">
 
-      <section class="questions">
-        <h2 class="visually-hidden">Три вопроса – три ответа по созданию сайта</h2>
+            <source media="(min-width:1200px)" srcset="img/mainfoto-desktop@1x.png 1x, img/mainfoto-desktop@2x.png 2x">
+            <source media="(min-width:768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="page-header__image" src="img/mainfoto-desktop@1x.png" srcset="img/mainfoto-desktop@2x.png 2x" width="280" height="180" alt="foto">
+          </picture> -->
+
+      <section class="trip">
         <div class="container">
-          <ul class="questions__list">
-            <li class="questions__item questions__item--first">
-              <p class="questions__bold questions__bold--first">Решаете, как вести бизнес в условиях всеобщей «удалёнки»?</p>
-            </li>
-            <li class="questions__item questions__item--second">
-              <p class="questions__bold questions__bold--second">Думаете, как найти клиентов?</p>
-            </li>
-            <li class="questions__item questions__item--third">
-              <p class="questions__bold questions__bold--third">Cоздайте свой сайт!</p>
-            </li>
-            <li class="questions__item questions__item--forth">
-              <p class="questions__answer questions__answer--top">Мы сделаем <span style="color: #fd2118; font-weight: 800;">сайт,</span> который нужен именно вам!</p>
-            </li>
-          </ul>
-
-          <a class="button button-js" href="form.html">Узнать подробности<span class="button__ellipse"></span></a>
+          <div class="trip__wrapper">
+            <h1 class="trip__heading">Путешествие по Европе</h1>
+            <p class="trip__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+            <a class="button" href="#tours">Смотреть тур</a>
+          </div>
         </div>
       </section>
 
@@ -478,8 +416,8 @@
       <button class="error__button">Попробовать снова</button>
     </div>
 
-    <script src="js/popup.min.js"></script>
-    <script src="js/slider.min.js"></script>
+ <!--    <script src="js/popup.min.js"></script>
+    <script src="js/slider.min.js"></script> -->
 
   </body>
 </html>
