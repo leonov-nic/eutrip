@@ -85,6 +85,57 @@ a {
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  &:hover {
+    background-color: @orange;
+  }
+
+  &:active {
+    background-color: @orange;
+    opacity: 0.3;
+  }
+}
+
+.button-noarrow {
+  display: inline-block;
+  vertical-align: top;
+
+  position: relative;
+
+  padding: 30px 30px 30px 40px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background-color: @red;
+  color: @white;
+
+  &:hover {
+    background-color: @orange;
+  }
+
+  &:active {
+    background-color: @orange;
+    opacity: 0.4;
+    box-shadow: 0 0 2px 2px @black;
+  }
+}
+
+.button-noarrow--form {
+  display: block;
+  margin: 0 auto;
+
+  border: none;
+
+  padding: 18px 40px 17px 40px;
+
+  width: 176px;
+
+  line-height: 15px;
+  letter-spacing: 2px;
 }
 
 // * {
