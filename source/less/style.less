@@ -2,11 +2,16 @@
 @import "variables.less";
 @import "mixins.less";
 @import "blocks/page-header.less";
-// @import "blocks/main-nav.less";
+@import "blocks/trip.less";
+@import "blocks/places.less";
+@import "blocks/feedback.less";
+@import "blocks/price.less";
+@import "blocks/questions.less";
+@import "blocks/page-footer.less";
 
-// html {
-//   scroll-behavior: smooth;
-// }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   .mapa();
@@ -102,11 +107,13 @@ a {
 
   position: relative;
 
+  width: auto;
+
   padding: 30px 30px 30px 40px;
 
   font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 10px;
+  line-height: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
 
@@ -124,7 +131,7 @@ a {
   }
 }
 
-.button-noarrow--form {
+.button-noarrow--center {
   display: block;
   margin: 0 auto;
 
@@ -132,10 +139,12 @@ a {
 
   padding: 18px 40px 17px 40px;
 
-  width: 176px;
+  // width: 176px;
+  width: 100%;
 
   line-height: 15px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 // * {
@@ -144,50 +153,42 @@ a {
 
 @media (min-width: @tablet-width) {
   .container {
-    width: 708px;
+    width: 768px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 0;
   }
 
   .button {
-    font-size: 14px;
-
-    min-width: 270px;
-
-    margin-top: 40px;
+    padding: 19px 107px 19px 40px;
+    line-height: 12px;
   }
 
-  .button--first {
-    margin-left: 99px;
+  .button-noarrow {
+    padding: 19px 0;
 
-    margin-top: 80px;
-
-    text-align: left;
+    width: 250px;
   }
 
-  .button__ellipse {
-    display: block;
 
-    position: absolute;
-    top: -58px;
-    right: -50px;
-    z-index: -1;
-
-    width: 162px;
-    height: 172px;
-
-    background-image: url("../img/ellipse.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    transition: 0.4s ease-out
-  }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    width: 1240px;
+    width: 1170px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0;
   }
+
+  .button-noarrow {
+    padding: 30px 30px 30px 40px;
+
+    width: auto;
+
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+
+
+
 }

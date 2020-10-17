@@ -1,0 +1,165 @@
+@media (min-width: @tablet-width) {
+
+  .questions {
+    margin-bottom: 80px;
+  }
+
+  .questions__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    position: relative;
+  }
+
+  .questions__back {
+    width: 100%;
+    padding: 228px 0;
+
+    background-color: @orange;
+    background-image: url("../img/questions-tablet@1x.jpg");
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .questions__back {
+      background-image: url("../img/questions-tablet@2x.jpg");
+    }
+  }
+
+  .questions__button {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 250px;
+
+    border: none;
+
+    padding: 19px 84px 19px 84px;
+    margin: 0 auto;
+
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    background-color: @red;
+    color: @white;
+
+    &:hover {
+      background-color: @orange;
+    }
+
+    &:active {
+      background-color: @orange;
+      opacity: 0.4;
+      box-shadow: 0 0 2px 2px @black;
+    }
+  }
+
+  .questions__box {
+    position: absolute;
+    left: calc(50% - 328px);
+    top: calc(50% - 155px);
+
+    width: 656px;
+
+    padding: 50px;
+    margin-left: 0;
+
+    background-color: @white;
+    box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+    border-radius: 5px;
+  }
+
+  .questions__title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+
+    margin-bottom: 11px;
+
+    color: @black;
+  }
+
+  .questions__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .questions__input {
+    width: 269px;
+
+    padding: 16px 15px 15px 26px;
+    margin-bottom: 25px;
+
+    border: 1px solid fade(@gray, 30%);
+
+    &:hover {
+      border: 1px solid @gray;
+    }
+  }
+
+  .questions__input[type="text"]:focus,
+  .questions__input[type="email"]:focus {
+    outline: none;
+
+    border: 1px solid @black;
+  }
+
+  .questions__input[type="text"]:focus:invalid,
+  .questions__input[type="email"]:focus:invalid {
+    border: 1px solid @red;
+    box-shadow: 0 0 0 1px #ff8282;
+  }
+
+  .questions__text {
+    text-align: center;
+
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .questions {
+    margin-bottom: 170px;
+  }
+
+  .questions__back {
+    width: 844px;
+    padding: 227px 0;
+
+    background-color: @orange;
+    background-image: url("../img/questions-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .questions__back {
+      background-image: url("../img/questions-desktop@2x.jpg");
+    }
+  }
+
+  .questions__button {
+    width: 176px;
+
+    padding: 18px 40px 18px 40px;
+  }
+
+  .questions__box {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 656px;
+
+    padding: 50px;
+    margin-left: -330px;
+
+    background-color: @white;
+    box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+    border-radius: 5px;
+  }
+}

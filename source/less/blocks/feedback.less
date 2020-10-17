@@ -1,0 +1,280 @@
+@media (min-width: @tablet-width) {
+
+  .feedback {
+    margin-top: 97px;
+    margin-bottom: 112px;
+  }
+
+
+  .feedback__list {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    padding: 0 37px;
+
+    margin-bottom: 33px;
+
+    &::before {
+      position: absolute;
+      left: 37px;
+      bottom: -13px;
+      z-index: -1;
+
+      content: "";
+
+      width: calc(100% - 74px);
+      height: 1px;
+
+      background-color: fade(@gray, 20%);
+    }
+  }
+
+  .feedback__link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.415px;
+
+    padding: 15px 0;
+    padding-right: 19px;
+    padding-left: 19px;
+
+    color: rgba(44, 46, 63, 0.3);
+
+    &:hover {
+      color: @orange;
+
+      border-bottom: 2px solid @orange;
+    }
+  }
+
+  .feedback__card-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+
+  .feedback__description {
+    flex: 0 0 94%;
+
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .feedback__heading {
+    position: relative;
+
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: -1.245px;
+
+    margin-bottom: 20px;
+  }
+
+  .feedback__text {
+    margin-bottom: 20px;
+  }
+
+  .feedback__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin-top: 30px;
+  }
+
+  .feedback__title {
+    position: relative;
+
+    width: 20%;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: -0.691667px;
+
+    margin-bottom: 32px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -16px;
+
+      content: "";
+
+      width: 68px;
+      height: 1px;
+
+      background-color: @red;
+    }
+  }
+
+  .feedback__people {
+    width: 382px;
+    padding: 30px;
+
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: -335px;
+
+    background-color: @white;
+  }
+
+  .feedback__text-people {
+    margin-bottom: 35px;
+  }
+
+  .feedback__name {
+    display: inline-block;
+    vertical-align: top;
+
+    font-weight: 500;
+
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+
+  .feedback__image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .feedback {
+    margin-top: 97px;
+    margin-bottom: 220px;
+  }
+
+  .feedback__list {
+    position: relative;
+
+    width: 902px;
+
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 90px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: -13px;
+      z-index: -1;
+
+      content: "";
+
+      width: 100%;
+      height: 2px;
+
+      background-color: fade(@gray, 20%);
+    }
+  }
+
+  .feedback__link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.415px;
+
+    padding: 15px 0;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    color: rgba(44, 46, 63, 0.3);
+
+    &:hover {
+      color: @orange;
+
+      border-bottom: 2px solid @orange;
+    }
+  }
+
+  .feedback__item:first-child .feedback__link {
+    padding-left: 0;
+  }
+
+  .feedback__card-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+
+  .feedback__description {
+    flex: 0 0 31%;
+
+    margin: 0;
+    text-align: left;
+  }
+
+  .feedback__heading {
+    position: relative;
+
+    // width: 20%;
+
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 80px;
+    letter-spacing: -1.245px;
+
+    margin-bottom: 53px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+
+      content: "";
+
+      width: 228px;
+      height: 3px;
+
+      background-color: @red;
+    }
+  }
+
+  .feedback__text {
+    margin-bottom: 50px;
+  }
+
+  .feedback__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin-top: 0;
+  }
+
+  .feedback__people {
+
+    margin-left: -112px;
+    margin-top: 0;
+
+    background-color: @white;
+  }
+
+  .feedback__image {
+    display: block;
+
+    width: 430px;
+    height: auto;
+  }
+}
+
