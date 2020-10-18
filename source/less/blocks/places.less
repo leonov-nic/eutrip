@@ -1,23 +1,99 @@
-@media (min-width: @tablet-width) {
+.places {
+  text-align: center;
+}
 
-  .places {
-    text-align: center;
-  }
+.places__cursor {
+  display: none
+}
 
-  .places__heading {
-    position: relative;
+.places__heading {
+  position: relative;
 
-    width: 20%;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -1.245px;
 
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 45px;
-    letter-spacing: -1.245px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 
-    margin-top: 80px;
-    margin-bottom: 20px;
+  width: 100%;
+
+  color: @black;
+}
+
+.places__text {
+  width: 90%;
+
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.places__list {
+  padding: 0 16px;
+}
+
+.places__item {
+  position: relative;
+
+  margin-bottom: 35px;
+}
+
+.places__link {
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    content: "";
 
     width: 100%;
+    height: 100%;
+
+    background-color: fade(@black, 0);
+  }
+}
+
+.places__link:active {
+  &::after {
+    background-color: fade(@black, 70%);
+  }
+}
+
+.places__image {
+  display: block;
+
+  width: 288px;
+  height: auto;
+}
+
+.places__title {
+  position: absolute;
+  left: calc(50% - 107px);
+  bottom: 0;
+  z-index: 10;
+
+  width: 215px;
+
+  padding: 16px 0 17px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+
+  .places__heading {
+    font-size: 30px;
+    line-height: 45px;
   }
 
   .places__text {
@@ -38,8 +114,6 @@
   }
 
   .places__item {
-    position: relative;
-
     margin-bottom: 20px;
   }
 
@@ -47,60 +121,9 @@
     display: none
   }
 
-  .places__link {
-    display: block;
-    position: relative;
-    z-index: 2;
-
-    &::after {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-
-      content: "";
-
-      width: 100%;
-      height: 100%;
-
-      background-color: fade(@black, 0);
-    }
-  }
-
-  .places__link:active {
-    &::after {
-      background-color: fade(@black, 70%);
-    }
-  }
-
   .places__link--center {
     margin: 0 auto;
   }
-
-  .places__image {
-    display: block;
-
-    width: 288px;
-    height: auto;
-  }
-
-  .places__title {
-    position: absolute;
-    left: calc(50% - 107px);
-    bottom: 0;
-    z-index: 10;
-
-    width: 215px;
-
-    padding: 16px 0 17px;
-
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-
-    background-color: @white;
-  }
-
 }
 
 @media (min-width: @desktop-width) {

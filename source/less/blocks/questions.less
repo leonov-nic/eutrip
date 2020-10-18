@@ -1,3 +1,111 @@
+.questions {
+  margin-bottom: 70px;
+}
+
+.questions__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  position: relative;
+
+  background-color: #fbf8f8;
+}
+
+.questions__back {
+  display: none;
+}
+
+.questions__button {
+  display: inline-block;
+  vertical-align: top;
+
+  width: 250px;
+
+  border: none;
+
+  padding: 19px 84px 19px 84px;
+  margin: 0 auto;
+
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background-color: @red;
+  color: @white;
+
+  &:hover {
+    background-color: @orange;
+  }
+
+  &:active {
+    background-color: @orange;
+    opacity: 0.4;
+    box-shadow: 0 0 2px 2px @black;
+  }
+}
+
+.questions__box {
+  position: relative;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+
+  padding: 50px 16px;
+}
+
+.questions__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  color: @black;
+}
+
+.questions__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.questions__input {
+  width: 269px;
+
+  padding: 16px 15px 15px 26px;
+  margin-bottom: 20px;
+
+  border: 1px solid fade(@gray, 30%);
+
+  &:hover {
+    border: 1px solid @gray;
+  }
+}
+
+.questions__input[type="text"]:focus,
+.questions__input[type="email"]:focus {
+  outline: none;
+
+  border: 1px solid @black;
+}
+
+.questions__input[type="text"]:focus:invalid,
+.questions__input[type="email"]:focus:invalid {
+  border: 1px solid @red;
+  box-shadow: 0 0 0 1px #ff8282;
+}
+
+.questions__text {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
 @media (min-width: @tablet-width) {
 
   .questions {
@@ -5,14 +113,12 @@
   }
 
   .questions__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    position: relative;
+    background-color: @white;
   }
 
   .questions__back {
+    display: block;
+
     width: 100%;
     padding: 228px 0;
 
@@ -73,14 +179,7 @@
   }
 
   .questions__title {
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 32px;
-    text-align: center;
-
     margin-bottom: 11px;
-
-    color: @black;
   }
 
   .questions__form {
@@ -90,34 +189,10 @@
   }
 
   .questions__input {
-    width: 269px;
-
-    padding: 16px 15px 15px 26px;
     margin-bottom: 25px;
-
-    border: 1px solid fade(@gray, 30%);
-
-    &:hover {
-      border: 1px solid @gray;
-    }
-  }
-
-  .questions__input[type="text"]:focus,
-  .questions__input[type="email"]:focus {
-    outline: none;
-
-    border: 1px solid @black;
-  }
-
-  .questions__input[type="text"]:focus:invalid,
-  .questions__input[type="email"]:focus:invalid {
-    border: 1px solid @red;
-    box-shadow: 0 0 0 1px #ff8282;
   }
 
   .questions__text {
-    text-align: center;
-
     margin-bottom: 24px;
   }
 }

@@ -8,6 +8,7 @@
 @import "blocks/price.less";
 @import "blocks/questions.less";
 @import "blocks/page-footer.less";
+@import "blocks/popup.less";
 
 html {
   scroll-behavior: smooth;
@@ -64,7 +65,10 @@ a {
 
   position: relative;
 
+  width: 288px;
+
   padding: 30px 180px 30px 40px;
+  padding: 19px 115px 19px 40px;
 
   font-weight: bold;
   font-size: 12px;
@@ -107,9 +111,9 @@ a {
 
   position: relative;
 
-  width: auto;
+  width: 288px;
 
-  padding: 30px 30px 30px 40px;
+  padding: 19px 30px 19px 40px;
 
   font-weight: bold;
   font-size: 10px;
@@ -161,6 +165,8 @@ a {
   .button {
     padding: 19px 107px 19px 40px;
     line-height: 12px;
+
+    width: auto;
   }
 
   .button-noarrow {
@@ -168,8 +174,6 @@ a {
 
     width: 250px;
   }
-
-
 }
 
 @media (min-width: @desktop-width) {
@@ -177,6 +181,10 @@ a {
     width: 1170px;
     margin: 0 auto;
     padding: 0 0;
+  }
+
+  .button {
+    padding: 30px 180px 30px 40px;
   }
 
   .button-noarrow {

@@ -1,3 +1,124 @@
+.page-footer {
+  padding-bottom: 25px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 0 11px;
+}
+
+.page-footer__box-left {
+  width: 100%;
+
+  text-align: center;
+}
+
+.page-footer__box-contacts {
+  width: 100%;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid fade(@gray, 20%);
+  border-top: 1px solid fade(@gray, 20%);
+
+  text-align: center;
+}
+
+.page-footer__box-right {
+  width: 100%;
+
+  padding-top: 30px;
+
+  text-align: center;
+}
+
+.page-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-footer__item {
+  width: 50%;
+
+  margin-bottom: 10px;
+}
+
+
+.page-footer__text {
+  font-size: 14px;
+  line-height: 170%;
+
+  color: fade(@gray, 50%);
+}
+
+.page-footer__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+
+  margin-bottom: 20px;
+
+  color: @black;
+}
+
+.page-footer__tel,
+.page-footer__post {
+  display: block;
+
+  position: relative;
+
+  padding-left: 20px;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration-line: underline;
+
+  color: @red;
+
+  &::before {
+    position: absolute;
+    left: 50px;
+    top: 5px;
+
+    content: "";
+
+    width: 18px;
+    height: 24px;
+
+    background-image: url("../img/icon-tel.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.page-footer__post {
+
+  font-size: 14px;
+
+  &::before {
+    left: 100px;
+
+    width: 26px;
+    height: 20px;
+
+    background-image: url("../img/icon-letter.svg");
+  }
+}
+
+.page-footer__mail {
+  display: none;
+}
+
+
+
+
+
 @media (min-width: @tablet-width) {
 
   .page-footer {
@@ -5,8 +126,6 @@
   }
 
   .page-footer__wrapper {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 
     padding: 0 21px;
@@ -22,6 +141,10 @@
     padding: 0 50px;
 
     border-left: 1px solid fade(@gray, 20%);
+    border-bottom: none;
+    border-top: none;
+
+    text-align: left;
   }
 
   .page-footer__box-right {
@@ -63,6 +186,10 @@
     margin-bottom: 20px;
 
     color: @black;
+  }
+
+  .page-footer__post {
+    display: none;
   }
 
   .page-footer__mail,

@@ -564,6 +564,7 @@
           <div class="page-footer__box-contacts">
             <p class="page-footer__title">Наши контакты</p>
             <a class="page-footer__mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+            <a class="page-footer__post" href="mailto:puteshestviemechta@gmail.ru">Почта</a>
             <a class="page-footer__tel" href="tel:+7499784-684-46">+7 (499) 784-684-46</a>
           </div>
 
@@ -581,22 +582,28 @@
       </div>
     </footer>
 
-    <section class="popup" style="display: none;">
+    <section class="popup">
       <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
 
       <div class="popup__wrapper">
-
         <div class="popup__image"></div>
 
-        <div class="popup__fields">
+        <div class="popup__box">
           <h2 class="popup__heading">Купить тур</h2>
-          <form class="popup__form" method="POST" enctype="multipart/form-data" action="php/order.php">
+
+          <form class="popup__form" method="POST" enctype="multipart/form-data"
+            action="php/order.php">
+
+            <p class="popup__mistake">Данные не верны</p>
             <input class="popup__input" id="phone" name="phone" type="tel" placeholder="* +7 Введите 10 цифр номера">
+
+            <p class="popup__mistake">Данные не верны</p>
             <input class="popup__input" id="mail" name="mail" type="email" placeholder="E-mail" required="">
 
-            <button class="button" type="submit">Отправить</button>
+            <button class="popup__button" type="submit">Отправить</button>
           </form>
         </div>
+
       </div>
     </section>
 
