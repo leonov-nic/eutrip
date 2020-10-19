@@ -1,10 +1,214 @@
+.page-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
+  width: 100%;
 
+  position: relative;
 
+  margin-bottom: 5px;
+}
 
+.page-header__logo {
+  position: absolute;
+  left: 16px;
+  top: 18px;
 
+  display: block;
+
+  width: 43px;
+  height: auto;
+}
+
+.page-header__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+
+  flex: 1 0 100%;
+  width: 100%;
+
+  margin-top: 45px;
+  // margin-bottom: 15px;
+}
+
+.page-header__toggle {
+  display: block;
+
+  .mapa();
+
+  border: 0;
+}
+
+.page-header__toggle::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+
+  content: "";
+
+  width: 50px;
+  height: 50px;
+
+  background-color: @red;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.page-header--closed .page-header__toggle::after {
+  background-image: url("../img/icon-menu.svg");
+  background-size: 30px 30px;
+}
+
+.page-header--opened .page-header__toggle::after {
+  background-image: url("../img/icon-close-menu.svg");
+  background-size: 22px 22px;
+}
+
+@media (max-width: @mobile-and-tablet-width-only) {
+  .page-header--nojs .page-header__toggle {
+    display: none;
+  }
+
+  .page-header--opened .page-header__list {
+    display: flex;
+  }
+
+  .page-header--opened .page-header__contact-list {
+    display: flex;
+  }
+
+  .page-header--closed .page-header__list {
+    display: none;
+  }
+
+  .page-header--closed .page-header__contact-list {
+    display: none;
+  }
+
+  @keyframes menu {
+    0% {transform: translateY(-50px);}
+    100% {transform: translateY(0);}
+  }
+
+  @keyframes menuclose {
+    0% {transform: translateY(50px);}
+
+    100% {transform: translateY(0);}
+  }
+
+  .menu-show {
+    animation-name: menu;
+    animation-duration: 0.6s;
+  }
+
+  .menu-close {
+    animation-name: menuclose;
+    animation-duration: 0.3s;
+  }
+}
+
+.page-header__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.page-header__link {
+  display: block;
+
+  padding: 10px 20px 10px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  color: @black;
+
+  &:hover {
+    background-color: fade(@red, 20%);
+  }
+}
+
+.page-header__link--red {
+  color: @red;
+}
+
+.page-header__contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 0 240px;
+
+  margin-left: 30px;
+}
+
+.page-header__contact-item {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    content: "";
+
+    width: 20px;
+    height: 24px;
+
+    background-image: url("../img/icon-tel-or.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.page-header__contact-link {
+  display: block;
+
+  position: relative;
+
+  padding-left: 30px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+
+  color: @red;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+
+    content: "";
+
+    width: 85%;
+    height: 1px;
+
+    background-color: @red;
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-header__toggle::after {
+    width: 70px;
+  }
+}
 
 @media (min-width: @desktop-width) {
+
+  .page-header__toggle {
+    display: none;
+  }
 
   .page-header__wrapper {
     display: flex;
@@ -12,10 +216,16 @@
     align-items: center;
 
     width: 100%;
+
+    margin-bottom: 5px;
   }
 
   .page-header__logo {
     display: block;
+
+    position: relative;
+    left: 0;
+    top: 0;
 
     width: 57px;
     height: auto;
@@ -29,6 +239,9 @@
 
     flex: 1 0 240px;
     width: 240px;
+
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .page-header__list {
@@ -53,11 +266,6 @@
     &:hover {
       background-color: fade(@red, 20%);
     }
-
-  }
-
-  .page-header__link--red {
-    color: @red;
   }
 
   .page-header__contact-list {
@@ -70,52 +278,6 @@
   }
 
   .page-header__contact-item {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      left: 0;
-      top: 0;
-
-      content: "";
-
-      width: 18px;
-      height: 24px;
-
-      background-image: url("../img/icon-tel-or.svg");
-      background-repeat: no-repeat;
-    }
+    margin-bottom: 0;
   }
-
-  .page-header__contact-link {
-    display: block;
-
-    position: relative;
-
-    padding-left: 30px;
-
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-
-    color: @red;
-
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: 5px;
-
-      content: "";
-
-      width: 85%;
-      height: 1px;
-
-      background-color: @red;
-    }
-  }
-
 }
-
-
-
-

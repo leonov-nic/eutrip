@@ -1,3 +1,158 @@
+.popup {
+  display: none;
+
+  position: fixed;
+  left: calc(50% - 160px);
+  top: calc(50% - 300px);
+  z-index: 50;
+
+  background-color: @white;
+}
+
+.popup__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.popup__image {
+  display: none;
+}
+
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 0;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    content: "";
+
+    width: 22px;
+    height: 22px;
+
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.popup__button {
+  display: inline-block;
+  vertical-align: top;
+
+  width: 176px;
+
+  border: none;
+
+  padding: 18px 40px 18px 40px;
+  margin: 0 auto;
+
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background-color: @red;
+  color: @white;
+
+  &:hover {
+    background-color: @orange;
+  }
+
+  &:active {
+    background-color: @orange;
+    opacity: 0.4;
+    box-shadow: 0 0 2px 2px @black;
+  }
+}
+
+.popup__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  width: 320px;
+
+  padding: 100px 16px 204px;
+}
+
+.popup__heading {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 42px;
+  text-align: center;
+
+  margin-bottom: 66px;
+
+  color: @black;
+}
+
+.popup__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  position: relative;
+}
+
+.popup__input {
+  width: 270px;
+
+  padding: 16px 15px 15px 26px;
+  margin-bottom: 20px;
+
+  border: 1px solid fade(@gray, 30%);
+
+  &:hover {
+    border: 1px solid @gray;
+  }
+}
+
+.popup__input[type="text"]:focus,
+.popup__input[type="email"]:focus {
+  outline: none;
+
+  border: 1px solid @black;
+}
+
+.popup__input[type="text"]:focus:invalid,
+.popup__input[type="email"]:focus:invalid {
+  .popup__mistake {
+    display: block;
+  }
+}
+
+.popup__input[type="text"]:focus:invalid,
+.popup__input[type="email"]:focus:invalid {
+  border: 1px solid @red;
+  box-shadow: 0 0 0 1px #ff8282;
+}
+
+.popup__mistake {
+  position: absolute;
+  left: 9px;
+  top: -15px;
+
+  display: none;
+
+  font-size: 12px;
+  line-height: 14px;
+
+  color: @red;
+}
+
+.popup__mistake--mail {
+  top: 53px;
+}
+
 @media (min-width: @tablet-width) {
 
   .popup {
@@ -90,72 +245,18 @@
   }
 
   .popup__box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-
     width: 390px;
+
+    padding: 0;
   }
 
   .popup__heading {
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 42px;
-    text-align: center;
-
     margin-bottom: 50px;
-
-    color: @black;
   }
 
   .popup__form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-  }
-
-  .popup__input {
-    width: 270px;
-
-    padding: 16px 15px 15px 26px;
-    margin-bottom: 20px;
-
-    border: 1px solid fade(@gray, 30%);
-
-    &:hover {
-      border: 1px solid @gray;
-    }
-  }
-
-  .popup__input[type="text"]:focus,
-  .popup__input[type="email"]:focus {
-    outline: none;
-
-    border: 1px solid @black;
-  }
-
-  .popup__input[type="text"]:focus:invalid,
-  .popup__input[type="email"]:focus:invalid {
-    .popup__mistake {
-      display: block;
-    }
-  }
-
-  .popup__input[type="text"]:focus:invalid,
-  .popup__input[type="email"]:focus:invalid {
-    border: 1px solid @red;
-    box-shadow: 0 0 0 1px #ff8282;
-  }
-
-  .popup__mistake {
-
-    display: none;
-
-    font-size: 12px;
-    line-height: 14px;
-
-    color: @red;
   }
 }

@@ -59,7 +59,7 @@
     <header class="page-header">
       <div class="container">
 
-        <div class="page-header__wrapper">
+        <div class="page-header__wrapper page-header--closed page-header--nojs">
 
           <picture>
             <source media="(min-width:1200px)" srcset="img/logo.svg">
@@ -67,8 +67,8 @@
             <img class="page-header__logo" src="img/logo.svg" width="57" height="22" alt="логотип">
           </picture>
 
-          <nav class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
-            <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+          <nav class="page-header__navigation">
+            <button class="page-header__toggle" type="button" aria-label="Открыть меню"></button>
 
             <ul class="page-header__list">
               <li class="page-header__item page-header__item--active">
@@ -483,6 +483,7 @@
       </section>
 
       <section class="questions">
+        <h2 class="visually-hidden">Задайте свой вопрос</h2>
         <div class="container">
           <div class="questions__wrapper">
 
@@ -494,7 +495,7 @@
               <form class="questions__form">
                 <input class="questions__input" type="text" name="tel" placeholder="* +7 Введите 10 цифр номера" pattern="[0-9]{10}" required="">
                 <input class="questions__input" type="email" name="mail" placeholder="E-mail" required="">
-                <input class="questions__button" type="submit" name="sub" placeholder="Отправить">
+                <input class="questions__button" type="submit" name="sub" value="Отправить">
               </form>
             </div>
 
@@ -597,7 +598,7 @@
             <p class="popup__mistake">Данные не верны</p>
             <input class="popup__input" id="phone" name="phone" type="tel" placeholder="* +7 Введите 10 цифр номера">
 
-            <p class="popup__mistake">Данные не верны</p>
+            <p class="popup__mistake popup__mistake--mail">Данные не верны</p>
             <input class="popup__input" id="mail" name="mail" type="email" placeholder="E-mail" required="">
 
             <button class="popup__button" type="submit">Отправить</button>
@@ -607,8 +608,8 @@
       </div>
     </section>
 
- <!--    <script src="js/popup.min.js"></script>
-    <script src="js/slider.min.js"></script> -->
+    <script src="js/popup.min.js"></script>
+    <!-- <script src="js/slider.min.js"></script> -->
 
   </body>
 </html>

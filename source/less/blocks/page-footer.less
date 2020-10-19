@@ -38,9 +38,10 @@
 .page-footer__list {
   display: flex;
   flex-wrap: wrap;
-
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
+
+  max-height: 350px;
 }
 
 .page-footer__item {
@@ -115,10 +116,6 @@
   display: none;
 }
 
-
-
-
-
 @media (min-width: @tablet-width) {
 
   .page-footer {
@@ -133,6 +130,8 @@
 
   .page-footer__box-left {
     width: 50%;
+
+    text-align: left;
   }
 
   .page-footer__box-contacts {
@@ -163,6 +162,9 @@
   .page-footer__list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+
+    max-height: initial;
   }
 
   .page-footer__item {
