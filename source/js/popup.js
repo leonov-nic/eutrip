@@ -30,11 +30,12 @@
 
   var addPopup = function () {
     popup.classList.add("popup__active");
+    var but = document.querySelector(".popup__close");
 
     document.addEventListener("keydown", isEscPress);
     close.addEventListener("keydown", isEnterPress);
     close.addEventListener("click", closePopup);
-    close.addEventListener("click", closePopup);
+
   };
 
   buttons.forEach(function (button) {

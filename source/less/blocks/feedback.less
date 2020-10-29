@@ -5,7 +5,7 @@
 
 .feedback__list {
   overflow-x: scroll;
-  overflow-y: fixed;
+  overflow-y: hidden;
 
   position: relative;
 
@@ -181,14 +181,14 @@
 
     display: flex;
 
-    padding: 20px 37px;
+    padding: 15px 37px;
 
     margin-bottom: 33px;
 
     &::before {
       position: absolute;
       left: 37px;
-      bottom: -13px;
+      bottom: 0;
       z-index: -1;
 
       content: "";
@@ -198,6 +198,12 @@
 
       background-color: fade(@gray, 20%);
     }
+  }
+
+  .feedback__item {
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
   }
 
   .feedback__link {
@@ -317,7 +323,10 @@
 
   .feedback__name {
     margin-top: 5px;
-    margin-left: 12px;
+    margin-left: 13px;
+
+    letter-spacing: -1.4px;
+
   }
 
   .feedback__image {
@@ -338,29 +347,33 @@
 @media (min-width: @desktop-width) {
 
   .feedback {
+
     margin-top: -2px;
-    margin-bottom: 220px;
+    margin-bottom: 238px;
+
+    // background-image: url(../img/map.svg);
+    // background-repeat: no-repeat;
+    // background-position: center 140px;
+    // background-size: 1443px 900px;
   }
 
   .feedback__list {
-    overflow: auto;
+    overflow: hidden;
 
     position: relative;
 
-    width: 100%;
+    width: 77.1%;
 
-    padding: 15px 0;
-    margin-top: -20px;
+    padding: 14px 0;
+    margin-bottom: 34px;
 
     display: flex;
     flex-wrap: wrap;
 
-    margin-bottom: 90px;
-
     &::before {
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 15px;
       z-index: -1;
 
       content: "";
@@ -388,17 +401,21 @@
     &:hover {
       color: @orange;
 
-      border-bottom: 2px solid @orange;
+      border-bottom: 2.5px solid @orange;
     }
   }
 
   .feedback__link--active {
     color: @orange;
-    border-bottom: 2px solid @orange;
+    border-bottom: 2.5px solid @orange;
   }
 
   .feedback__item:first-child .feedback__link {
     padding-left: 0;
+  }
+
+  .feedback__item:last-child .feedback__link {
+    padding-right: 0;
   }
 
   .feedback__card-item {
@@ -425,12 +442,13 @@
     line-height: 80px;
     letter-spacing: -1.245px;
 
-    margin-bottom: 55px;
+    margin-bottom: 56px;
+    margin-top: 45px;
 
     &::after {
       position: absolute;
       left: 0;
-      bottom: -26px;
+      bottom: -23px;
 
       content: "";
 
@@ -443,6 +461,7 @@
 
   .feedback__text {
     margin-bottom: 50px;
+    line-height: 1.79;
   }
 
   .feedback__wrapper {
@@ -451,7 +470,7 @@
 
     align-items: center;
 
-    margin-top: -11px;
+    // margin-top: -31px;
   }
 
   .feedback__people {

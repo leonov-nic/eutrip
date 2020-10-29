@@ -27,6 +27,10 @@
   order: 2;
 }
 
+.price__subitem {
+  margin-bottom: 10px;
+}
+
 .price__underbutton {
   position: absolute;
   bottom: -3px;
@@ -50,6 +54,10 @@
 .price__item--bor-dark {
 
   border-color: fade(@gray, 30%);
+
+  .price__sublist {
+    margin-bottom: 39px;
+  }
 
   .price__title {
     color: fade(@gray, 70%)
@@ -119,9 +127,9 @@
 .price__text {
   position: relative;
 
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 
-  line-height: 24px;
+  line-height: 20px;
 
   text-align: center;
 
@@ -173,6 +181,7 @@
   text-align: center;
 
   margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .price__link {
@@ -189,6 +198,7 @@
   text-decoration: underline;
 
   margin-bottom: 20px;
+  padding-left: 23px;
 }
 
 @media (min-width: @tablet-width) {
@@ -209,8 +219,9 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 34px;
+    letter-spacing: -1px;
 
-    margin-bottom: 10px;
+    margin-bottom: 150px;
 
     color: @red;
   }
@@ -222,6 +233,7 @@
     font-weight: 600;
     font-size: 25px;
     line-height: 34px;
+    letter-spacing: -1.8px;
 
     color: @red;
 
@@ -255,9 +267,9 @@
   .price__text {
     position: relative;
 
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 
-    line-height: 24px;
+    line-height: 20px;
 
     text-align: center;
 
@@ -276,7 +288,7 @@
   }
 
   .price__sublist {
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .price__heading {
@@ -294,17 +306,23 @@
 
 @media (min-width: @desktop-width) {
   .price {
-    margin-bottom: 168px;
+    margin-bottom: 115px;
 
     padding: 0;
   }
 
   .price__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
     width: 370px;
+    min-height: 670px;
 
     border: 3px solid @red;
 
     padding: 30px;
+    padding-bottom: 20px;
     padding-top: 40px;
   }
 
@@ -315,7 +333,11 @@
   .price__item--bor-none {
     border: none;
 
-    padding-top: 114px;
+    flex-direction: column;
+
+    padding-top: 116px;
+    padding-left: 80px;
+    padding-right: 15px;
 
     order: 3;
     width: 370px;
@@ -327,27 +349,25 @@
 
     font-size: 28px;
 
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .price__money {
-    float: right;
-
     display: inline-block;
     vertical-align: top;
 
     font-size: 28px;
 
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
   }
 
   .price__text {
     position: relative;
 
-    margin-bottom: 60px;
-
-    line-height: 32px;
     text-align: left;
+
+    margin-bottom: 60px;
 
     &::after {
       position: absolute;
@@ -367,8 +387,12 @@
     padding: 0;
   }
 
+  .price__item .price__sublist {
+    margin-right: auto;
+  }
+
   .price__sublist {
-    margin-bottom: 54px;
+    width: 270px;
   }
 
   .price__heading {
@@ -398,18 +422,20 @@
 
   .price__text-last {
     text-align: left;
+    word-spacing: 0.15em;
 
-    margin-bottom: 60px;
+    margin-bottom: 57px;
+
+    width: 105%;
   }
 
   .price__text-bold {
     font-size: 22px;
 
-    margin-bottom: 13px;
+    margin-bottom: 10px;
   }
 
   .price__link {
-
     font-size: 20px;
     line-height: 32px;
 
@@ -420,8 +446,8 @@
 
     &::before {
       position: absolute;
-      left: 20px;
-      top: 5px;
+      left: 0;
+      top: 2px;
 
       content: "";
 

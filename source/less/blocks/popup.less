@@ -4,7 +4,7 @@
   position: fixed;
   left: calc(50% - 160px);
   top: calc(50% - 300px);
-  z-index: 50;
+  z-index: 60;
 
   background-color: @white;
 }
@@ -25,24 +25,36 @@
   display: none;
 }
 
+.popup__close-svg {
+  color: @black;
+  opacity: 0.2;
+
+  transition: 0.3s;
+}
+
 .popup__close {
-  position: relative;
+  border: none;
+  background: none;
+
+  position: absolute;
   right: 20px;
-  top: 0;
+  top: 20px;
 
-  &::after {
-    position: absolute;
-    right: 0;
-    top: 0;
+  &:hover {
 
-    content: "";
+    transform: scale(1.2);
+    .popup__close-svg {
+      color: @orange;
+      opacity: 1;
 
-    width: 22px;
-    height: 22px;
+      transition: 0.3s;
+    }
+  }
 
-    background-image: url("../img/icon-close.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  &:active {
+    transform: scale(1.2);
+    transform: translate(0, 2px);
+    opacity: 0.5;
   }
 }
 
@@ -196,33 +208,6 @@
   @media (min-resolution: @retina-dppx) {
     .popup__image {
       background-image: url("../img/popup-desktop@2x.png");
-    }
-  }
-
-  .popup__close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-
-    padding: 10px;
-    background: none;
-    border: none;
-
-    cursor: pointer;
-
-    &::after {
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      content: "";
-
-      width: 22px;
-      height: 22px;
-
-      background-image: url("../img/icon-close.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
     }
   }
 

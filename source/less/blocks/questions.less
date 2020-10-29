@@ -77,7 +77,7 @@
 .questions__input {
   width: 269px;
 
-  padding: 16px 15px 15px 26px;
+  padding: 16px 15px 15px 20px;
   margin-bottom: 20px;
 
   border: 1px solid fade(@gray, 30%);
@@ -85,6 +85,13 @@
   &:hover {
     border: 1px solid @gray;
   }
+
+  &::placeholder {
+    color: fade(@gray, 50%);
+
+    letter-spacing: 1px;
+  }
+
 }
 
 .questions__input[type="text"]:focus,
@@ -110,6 +117,8 @@
 
   .questions {
     margin-bottom: 80px;
+
+    padding-left: 20px;
   }
 
   .questions__wrapper {
@@ -144,9 +153,9 @@
     margin: 0 auto;
 
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 
     background-color: @red;
@@ -194,6 +203,8 @@
 
   .questions__text {
     margin-bottom: 24px;
+
+     letter-spacing: 0.1px;
   }
 }
 
