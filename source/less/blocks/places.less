@@ -1,7 +1,7 @@
 .places {
   text-align: center;
 
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .places__cursor {
@@ -14,7 +14,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-  letter-spacing: -1.245px;
+  letter-spacing: -0.10667px;
 
   margin-top: 80px;
   margin-bottom: 20px;
@@ -101,6 +101,10 @@
 
 @media (min-width: @tablet-width) {
 
+  .places {
+    margin-bottom: 20px;
+  }
+
   .places__heading {
     font-size: 30px;
     line-height: 45px;
@@ -125,6 +129,10 @@
 
   .places__item {
     margin-bottom: 20px;
+  }
+
+  .places__item:nth-last-child(2) {
+    margin-right: 0;
   }
 
   .places__cursor {

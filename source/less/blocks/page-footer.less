@@ -19,7 +19,7 @@
 .page-footer__box-contacts {
   width: 100%;
 
-  padding: 20px 0;
+  padding: 30px 0 7px;
 
   border-bottom: 1px solid fade(@gray, 20%);
   border-top: 1px solid fade(@gray, 20%);
@@ -41,19 +41,21 @@
   justify-content: center;
   flex-direction: column;
 
-  max-height: 350px;
+  max-height: 290px;
+
+  margin-bottom: 10px;
 }
 
 .page-footer__item {
   width: 50%;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-
 
 .page-footer__text {
   font-size: 14px;
-  line-height: 175%;
+  line-height: 170%;
+  letter-spacing: 0.09px;
 
   color: fade(@gray, 50%);
 }
@@ -69,22 +71,20 @@
   color: @black;
 }
 
-// .page-footer__box-contacts .page-footer__title {
-//   text-align: center;
-// }
-
 .page-footer__tel,
-.page-footer__post {
+.page-footer__post,
+.page-footer__mail {
   display: block;
 
   position: relative;
 
   padding-left: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 
   font-size: 16px;
   line-height: 32px;
   text-decoration-line: underline;
+  letter-spacing: 0.1px;
 
   color: @red;
 
@@ -106,6 +106,7 @@
 .page-footer__post {
 
   font-size: 14px;
+  padding-left: 25px;
 
   &::before {
     left: 100px;
@@ -130,17 +131,17 @@
   .page-footer__wrapper {
     justify-content: space-between;
 
-    padding: 0 21px;
+    padding: 0 21px 0 3px;
   }
 
   .page-footer__box-left {
-    width: 50%;
+    width: 55%;
 
     text-align: left;
   }
 
   .page-footer__box-contacts {
-    width: 50%;
+    width: 45%;
 
     padding: 0 50px;
 
@@ -154,10 +155,11 @@
   .page-footer__box-right {
     width: 100%;
 
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 30px;
-    margin-top: 30px;
+    margin-top: 22px;
+    margin-left: 10px;
 
     border-top: 1px solid fade(@gray, 30%);
 
@@ -170,12 +172,15 @@
     flex-direction: row;
 
     max-height: initial;
+
+    padding-right: 0;
+    margin-bottom: 0;
   }
 
   .page-footer__item {
     width: 30%;
 
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
 
   .page-footer__text {
@@ -186,18 +191,19 @@
     color: fade(@gray, 50%);
   }
 
+  .page-footer__box-contacts .page-footer__title {
+    padding-left: 0;
+  }
+
   .page-footer__title {
     font-weight: 600;
     font-size: 18px;
     line-height: 32px;
 
     margin-bottom: 18px;
+    padding-left: 17px;
 
     color: @black;
-  }
-
-  .page-footer__post {
-    display: none;
   }
 
   .page-footer__mail,
@@ -243,6 +249,20 @@
       background-image: url("../img/icon-letter.svg");
     }
   }
+
+  .page-footer__mail {
+    display: none;
+  }
+
+  .page-footer__post {
+    display: block;
+
+    padding-left: 45px;
+
+    &::before {
+      left: 2px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -275,6 +295,7 @@
     padding-right: 0;
     padding-top: 0;
     margin-top: 0;
+    margin-left: 0;
 
     border-top: none;
     border-left: 1px solid fade(@gray, 30%);
@@ -294,6 +315,18 @@
     width: 30%;
 
     margin-bottom: 3px;
+  }
+
+  .page-footer__title {
+    padding-left: 0;
+  }
+
+  .page-footer__mail {
+    display: block;
+  }
+
+  .page-footer__post {
+    display: none;
   }
 
 }

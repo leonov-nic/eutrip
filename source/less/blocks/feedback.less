@@ -1,24 +1,26 @@
 .feedback {
   margin-top: 40px;
-  margin-bottom: 45px;
+  margin-bottom: 53px;
 }
 
 .feedback__list {
   overflow-x: scroll;
   overflow-y: hidden;
 
+  display: flex;
+
   position: relative;
 
   width: 320px;
 
-  padding: 0 15px;
+  padding: 10px 15px;
 
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 
   &::before {
     position: absolute;
     left: 15px;
-    bottom: -13px;
+    bottom: 0;
     z-index: -1;
 
     content: "";
@@ -38,10 +40,16 @@
   letter-spacing: -0.415px;
 
   padding: 15px 0;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-bottom: 13px;
+  padding-right: 100px;
+  padding-left: 0;
 
   color: rgba(44, 46, 63, 0.3);
+}
+
+.feedback__link--active {
+  color: @orange;
+  border-bottom: 2px solid @orange;
 }
 
 .feedback__card-list {
@@ -63,6 +71,19 @@
   margin-bottom: 20px;
 }
 
+.feedback__card-list .feedback__card-item:first-child {
+  position: relative;
+  display: flex;
+
+  min-height: 605px;
+}
+
+.feedback__card-item--active {
+  display: flex;
+  opacity: 1;
+  transition: 0.6s;
+}
+
 .feedback__description {
   flex: 0 0 100%;
 
@@ -71,7 +92,7 @@
 
   line-height: 28px;
 
-  padding: 0 15px;
+  padding: 0 11px;
 }
 
 .feedback__heading {
@@ -109,20 +130,21 @@
   width: 100%;
 
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 37px;
   letter-spacing: -0.691667px;
 
-  margin-bottom: 32px;
+  margin-bottom: 25px;
+  margin-top: 10px;
 
   &::after {
     position: absolute;
-    left: 60px;
-    bottom: -16px;
+    left: 80px;
+    bottom: -4px;
 
     content: "";
 
-    width: 50%;
+    width: 30%;
     height: 1px;
 
     background-color: @red;
@@ -146,7 +168,7 @@
 }
 
 .feedback__text-people {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-size: 14px;
 }
 
@@ -155,8 +177,9 @@
   vertical-align: top;
 
   font-weight: 500;
+  letter-spacing: -0.466667px;
 
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: 0;
 }
 
@@ -170,8 +193,8 @@
 @media (min-width: @tablet-width) {
 
   .feedback {
-    margin-top: 97px;
-    margin-bottom: 112px;
+    margin-top: 80px;
+    margin-bottom: 75px;
   }
 
   .feedback__list {
@@ -181,7 +204,7 @@
 
     display: flex;
 
-    padding: 15px 37px;
+    padding: 0 37px;
 
     margin-bottom: 33px;
 
@@ -193,7 +216,7 @@
 
       content: "";
 
-      width: calc(100% - 74px);
+      width: calc(100% + 134px);
       height: 1px;
 
       background-color: fade(@gray, 20%);
@@ -213,8 +236,9 @@
     text-align: center;
     letter-spacing: -0.415px;
 
-    padding: 15px 0;
-    padding-right: 40px;
+    padding: 12px 0 17px;
+    padding-bottom: 10px;
+    padding-right: 60px;
     padding-left: 40px;
 
     color: rgba(44, 46, 63, 0.3);
@@ -250,16 +274,17 @@
   }
 
   .feedback__card-item--active {
-
     display: flex;
     opacity: 1;
     transition: 0.6s;
   }
 
   .feedback__description {
-    flex: 0 0 94%;
+    flex: 0 0 98%;
 
     margin: 0 auto;
+    padding: 0 15px;
+
     text-align: center;
   }
 
@@ -291,6 +316,8 @@
     letter-spacing: -0.691667px;
 
     margin-bottom: 32px;
+    margin-top: 0;
+
 
     &::after {
       position: absolute;
@@ -347,7 +374,6 @@
 @media (min-width: @desktop-width) {
 
   .feedback {
-
     margin-top: -2px;
     margin-bottom: 238px;
 
@@ -419,7 +445,6 @@
   }
 
   .feedback__card-item {
-
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -469,12 +494,9 @@
     flex-wrap: wrap;
 
     align-items: center;
-
-    // margin-top: -31px;
   }
 
   .feedback__people {
-
     margin-left: -112px;
     margin-top: 0;
 
