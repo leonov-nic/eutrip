@@ -7,8 +7,9 @@
   var popup = document.querySelector(".popup");
   var close = popup.querySelector(".popup__close");
   var buttons = document.querySelectorAll(".button-js");
-  var menu = document.querySelectorAll('.feedback__link');
-  var cards = document.querySelectorAll('.feedback__card-item');
+  var menu = document.querySelectorAll(".feedback__link");
+  var places = document.querySelectorAll(".places__link");
+  var cards = document.querySelectorAll(".feedback__card-item");
   var mainNavigation = document.querySelector(".page-header__wrapper");
   var toggleMenu = document.querySelector(".page-header__toggle");
   var listMenu = document.querySelector(".page-header__list");
@@ -52,6 +53,32 @@
     close.removeEventListener("keydown", isEnterPress);
   };
 
+
+
+  var showPlace = function (place, menu, element) {
+
+    place.addEventListener("click", function () {
+
+      var menus = document.querySelectorAll('.feedback__link');
+      var cards = document.querySelectorAll('.feedback__card-item');
+
+      for (var i = 0; i < menus.length; i++) {
+        menus[i].className = "feedback__link";
+        cards[i].classList.remove("feedback__card-item--active");
+      }
+
+      menu.classList.add("feedback__link--active");
+      element.classList.add("feedback__card-item--active");
+    });
+
+  };
+
+  for (var i = 0; i < menu.length; i++) {
+    showPlace(places[i], menu[i], cards[i]);
+  }
+
+
+
   var openCard = function (menu, element) {
 
     menu.addEventListener('click', function () {
@@ -70,6 +97,8 @@
   for (var i = 0; i < menu.length; i++) {
     openCard(menu[i], cards[i]);
   }
+
+
 
   mainNavigation.classList.remove("page-header--nojs");
 

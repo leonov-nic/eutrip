@@ -11,7 +11,7 @@
 
   position: relative;
 
-  width: 320px;
+  max-width: 700px;
 
   padding: 10px 15px;
 
@@ -116,6 +116,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
 
   margin-top: 50px;
 
@@ -186,8 +187,10 @@
 .feedback__image {
   display: block;
 
-  width: 100%;
+  width: 320px;
   height: auto;
+
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -200,6 +203,7 @@
   .feedback__list {
     position: relative;
 
+    max-width: auto;
     width: 100%;
 
     display: flex;
@@ -298,6 +302,8 @@
   }
 
   .feedback__wrapper {
+    flex-direction: row;
+
     margin-top: 30px;
 
     width: auto;
@@ -388,6 +394,7 @@
 
     position: relative;
 
+    max-width: 77.1%;
     width: 77.1%;
 
     padding: 14px 0;

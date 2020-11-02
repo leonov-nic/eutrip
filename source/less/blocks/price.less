@@ -7,9 +7,12 @@
 .price__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   padding: 0 14px;
+  margin: 0 auto;
+
+  max-width: 610px;
 }
 
 .price__item {
@@ -239,7 +242,12 @@
   }
 
   .price__list {
+    justify-content: space-between;
+
     padding: 0 20px;
+    margin: 0;
+
+    max-width: 100%;
   }
 
   .price__item {
