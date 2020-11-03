@@ -15,6 +15,9 @@
   var listMenu = document.querySelector(".page-header__list");
   var listContact = document.querySelector(".page-header__contact-list");
   var trip = document.querySelector(".trip");
+  var fields = document.querySelectorAll(".popup__input");
+  var submit = document.querySelector(".popup__button");
+  var texts = document.querySelectorAll(".popup__mistake");
 
   var isEscPress = function (evt) {
     if (evt.key === KEY_ESCAPE) {
@@ -53,8 +56,6 @@
     close.removeEventListener("keydown", isEnterPress);
   };
 
-
-
   var showPlace = function (place, menu, element) {
 
     place.addEventListener("click", function () {
@@ -77,8 +78,6 @@
     showPlace(places[i], menu[i], cards[i]);
   }
 
-
-
   var openCard = function (menu, element) {
 
     menu.addEventListener('click', function () {
@@ -97,8 +96,6 @@
   for (var i = 0; i < menu.length; i++) {
     openCard(menu[i], cards[i]);
   }
-
-
 
   mainNavigation.classList.remove("page-header--nojs");
 
@@ -119,6 +116,33 @@
   }
 
   toggleMenu.addEventListener("click", openCloseMenu);
+
+  var errorText = function (field, text) {
+
+    field.addEventListener("input", function () {
+      if (field.value && field.validity.patternMismatch || field.badInput) {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    });
+  }
+
+  for (var i = 0; i < fields.length; i++) {
+    errorText(fields[i], texts[i]);
+  }
+
+  submit.addEventListener("click", function() {
+
+    for (var i = 0; i < fields.length; i++) {
+
+      if (fields[i].validity.patternMismatch || !fields[i].value) {
+        texts[i].style.display = "block";
+      }  else {
+        texts[i].style.display = "none";
+      }
+    }
+  });
 
 
 })();

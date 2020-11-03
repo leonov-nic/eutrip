@@ -592,10 +592,10 @@
             action="php/order.php">
 
             <p class="popup__mistake">Данные не верны</p>
-            <input class="popup__input" id="phone" name="phone" type="tel" placeholder="* +7 Введите 10 цифр номера">
+            <input class="popup__input" id="phone" name="phone" type="text" placeholder="* +7 Введите 10 цифр номера" pattern="[0-9]{10}" required="">
 
             <p class="popup__mistake popup__mistake--mail">Данные не верны</p>
-            <input class="popup__input" id="mail" name="mail" type="email" placeholder="E-mail" required="">
+            <input class="popup__input" id="mail" name="mail" type="email" placeholder="E-mail" required="" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
 
             <button class="popup__button" type="submit">Отправить</button>
           </form>
