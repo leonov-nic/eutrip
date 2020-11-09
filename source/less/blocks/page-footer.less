@@ -17,6 +17,8 @@
 }
 
 .page-footer__box-contacts {
+  position: relative;
+
   width: 100%;
 
   padding: 30px 0 7px;
@@ -58,6 +60,12 @@
   letter-spacing: 0.09px;
 
   color: fade(@gray, 50%);
+
+  display: block;
+
+  &:hover {
+    color: fade(@gray, 100%);
+  }
 }
 
 .page-footer__title {
@@ -88,9 +96,14 @@
 
   color: @red;
 
+  &:hover {
+    color: @gray;
+    text-decoration-line: none;
+  }
+
   &::before {
     position: absolute;
-    left: 50px;
+    left: calc(50% - 100px);
     top: 5px;
 
     content: "";
@@ -109,7 +122,7 @@
   padding-left: 25px;
 
   &::before {
-    left: 100px;
+    left: calc(50% - 50px);
 
     width: 26px;
     height: 20px;

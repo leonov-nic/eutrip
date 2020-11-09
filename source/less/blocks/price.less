@@ -29,21 +29,27 @@
   margin-left: 0;
 
   order: 2;
+
+  &:hover {
+    border-color: fade(@gray, 30%);
+    .price__title {
+      color: fade(@gray, 70%)
+    }
+
+    .price__money {
+      color: fade(@gray, 70%)
+    }
+
+    .price__subtext {
+      &::after {
+        background-image: url("../img/icon-tick-or.svg");
+      }
+    }
+  }
 }
 
 .price__subitem {
   margin-bottom: 10px;
-}
-
-.price__underbutton {
-  position: absolute;
-  bottom: -3px;
-  left: -3px;
-
-  width: 292px;
-  padding: 28px 0;
-
-  background-color: @red;
 }
 
 .price__item--bor-none {
@@ -67,12 +73,6 @@
     margin-bottom: 40px;
   }
 
-  .price__underbutton {
-    width: 294px;
-
-    padding: 26px 0;
-  }
-
   .price__title {
     color: fade(@gray, 70%)
   }
@@ -92,6 +92,24 @@
 
     &::after {
       background-color: fade(@gray, 30%);
+    }
+  }
+
+  &:hover {
+    border-color: @red;
+
+    .price__title {
+      color: @red;
+    }
+
+    .price__money {
+      color: @red;
+    }
+
+    .price__subtext {
+      &::after {
+        background-image: url("../img/icon-tick.svg");
+      }
     }
   }
 }
@@ -290,7 +308,7 @@
   }
 
   .price__sublist {
-    margin-bottom: 49px;
+    margin-bottom: 30px;
   }
 
   .price__subitem {
@@ -299,29 +317,13 @@
     padding-right: 0;
   }
 
-  .price__underbutton {
-    left: -3px;
-    bottom: -3px;
-
-    width: 288px;
-
-    padding: 29px 0;
-  }
-
   .price__item--bor-dark {
     margin-right: 50px;
 
+    padding-bottom: 10px;
+
     .price__sublist {
-      margin-bottom: 40px;
-    }
-
-    .price__underbutton {
-      bottom: -1px;
-      left: -1px;
-
-      padding: 28px 0;
-
-      width: 288px;
+      margin-bottom: 20px;
     }
   }
 
@@ -329,6 +331,8 @@
     order: 1;
 
     width: 100%;
+
+    margin-left: 0;
   }
 
   .price__subtext {
@@ -420,17 +424,14 @@
     margin-left: 0;
   }
 
-  .price__underbutton {
-    display: none;
-  }
-
   .price__item--bor-dark {
     margin-right: 0;
+    padding-bottom: 0;
 
     border-color: fade(@gray, 30%);
 
     .price__sublist {
-      margin-bottom: 39px;
+      margin-bottom: 16px;
     }
   }
 

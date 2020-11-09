@@ -35,6 +35,17 @@ base: "source"
 .pipe(gulp.dest("build"));
 });
 
+gulp.task("cssnomin", function () {
+return gulp.src("source/less/style.less")
+.pipe(plumber())
+.pipe(sourcemap.init())
+.pipe(less())
+.pipe(postcss([autoprefixer()]))
+.pipe(rename("style.css"))
+.pipe(sourcemap.write("."))
+.pipe(gulp.dest("build/css"))
+});
+
 gulp.task("css", function () {
 return gulp.src("source/less/style.less")
 .pipe(plumber())
@@ -112,6 +123,7 @@ done();
 gulp.task("build", gulp.series(
 "clean",
 "copy",
+"cssnomin",
 "css",
 "sprite",
 "html",
