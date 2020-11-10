@@ -583,8 +583,7 @@
         <div class="popup__box">
           <h2 class="popup__heading">Купить тур</h2>
 
-          <form class="popup__form" method="POST" enctype="multipart/form-data"
-            >  <!-- action="php/order.php" -->
+          <form class="popup__form" method="POST" enctype="multipart/form-data">  <!-- action="php/order.php" -->
 
             <p class="popup__mistake">Данные не верны</p>
             <input class="popup__input" id="phone" name="phone" type="tel" placeholder="* +7 Введите 10 цифр номера" pattern="[0-9]{10}" required="">
@@ -600,6 +599,7 @@
     </section>
 
     <section class="popup-successfully">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <div class="popup-successfully__wrapper">
 
         <p class="popup-successfully__text">Форма успешно отправлена <br> спасибо! :)</p>

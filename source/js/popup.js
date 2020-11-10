@@ -21,6 +21,9 @@
   var submit = document.querySelector(".popup__button");
   var form = document.querySelector(".popup__form");
   var texts = document.querySelectorAll(".popup__mistake");
+  var popupSuccess = document.querySelector(".popup-successfully");
+  var popupText = document.querySelector(".popup-successfully__text");
+  var URL = "../php/order.php";
 
   var isEscPress = function (evt) {
     if (evt.key === KEY_ESCAPE) {
@@ -29,12 +32,12 @@
     }
   };
 
-  var isEscPressSucces = function (evt, action) {
+  function isEscPressSucces (evt, action) {
     if (evt.key === KEY_ESCAPE) {
       evt.preventDefault();
       action();
     }
-  };
+  }
 
   var isEnterPress = function (evt, action) {
     if (evt.key === KEY_ENTER) {
@@ -74,14 +77,8 @@
     close.removeEventListener("click", closePopup);
     element.removeEventListener("click", closePopup);
     close.removeEventListener("keydown", isEnterPress);
-  };
-
-  var closePopupSuccessfully = function () {
-    var popupSuccess = document.querySelector('.popup-successfully');
-    popupSuccess.style.display = "none";
-
-    document.removeEventListener("keydown", onPopupEscPress);
-    popupSuccess.removeEventListener("click", closePopupSuccessfully);
+    submit.removeEventListener("click", showValidityText);
+    form.removeEventListener("submit", onSubmit);
   };
 
   var showPlace = function (place, menu, element) {
@@ -161,18 +158,19 @@
   }
 
   function showValidityText () {
-    submit.addEventListener("click", function () {
-      for (var i = 0; i < fields.length; i++) {
-        if (fields[i].validity.patternMismatch || !fields[i].value) {
-          texts[i].style.display = "block";
-        }  else {
+
+    for (var i = 0; i < fields.length; i++) {
+      if (fields[i].validity.patternMismatch || !fields[i].value) {
+        texts[i].style.display = "block";
+
+        popup.classList.remove("popup__error");
+        popup.offsetWidth === popup.offsetWidth;
+        popup.classList.add("popup__error");
+      } else {
           texts[i].style.display = "none";
         }
-      }
-    });
+    }
   }
-
-  showValidityText();
 
   var storageMail = "";
   var isStorageSupport = "true";
@@ -184,18 +182,6 @@
     isStorageSupport = "false";
   }
 
-  var setDataStorage = function () {
-
-    if (!tel.vaule || !mail.value) {
-      popup.classList.add("popup__error");
-    } else {
-      if (isStorageSupport) {
-        popup.classList.remove("popup__error");
-        localStorage.setItem("mail", mail.value);
-      }
-    }
-  }
-
   function catchStorage() {
     if (storageMail) {
       mail.value = storageMail;
@@ -205,84 +191,79 @@
     }
   }
 
-  form.addEventListener("submit", function(evt) {
-    setDataStorage();
-
+  var onSubmit = function (evt) {
     save(new FormData(form), addSuccessModal, addErrorModal);
-
     evt.preventDefault();
+    if (isStorageSupport) {
+      localStorage.setItem("mail", mail.value);
+    }
+  };
 
-  });
+  submit.addEventListener("click", showValidityText);
+  form.addEventListener("submit", onSubmit);
 
-
-
-
-
-  //   var onSubmit = function (evt) {
-  //   window.backend.save(new FormData(adForm), window.modal.addSuccessModal, window.modal.addErrorModal);
-  //   evt.preventDefault();
-  // };
-
-  var URL = '../php/order.php';
-
-  // adForm.addEventListener('submit', onSubmit);
-
- function save (data, onLoad, onError) {
+  function save (data, onLoad, onError) {
     var xhr = new XMLHttpRequest();
-    xhr.responseType = 'json';
+    xhr.responseType = "json";
 
-    xhr.addEventListener('load', function () {
-      console.log(xhr.response);
+    xhr.addEventListener("load", function () {
       if (xhr.status === 200) {
         closePopup();
         onLoad(xhr.response);
       } else {
-        onError('Ошибка: ' + xhr.status + ' ' + xhr.statusText);
+        onError("Ошибка: " + xhr.status + " " + xhr.statusText);
       }
     });
 
-    xhr.addEventListener('error', function () {
-      onError('Произошла ошибка соединения');
+    xhr.addEventListener("error", function () {
+      onError("Произошла ошибка соединения");
     });
 
-    xhr.addEventListener('timeout', function () {
-      onError('Запрос не успел выполниться за ' + xhr.timeout + 'мс');
+    xhr.addEventListener("timeout", function () {
+      onError("Запрос не успел выполниться за " + xhr.timeout + "мс");
     });
 
     xhr.timeout = 5000;
 
-    xhr.open('POST', URL);
+    xhr.open("POST", URL);
     xhr.send(data);
   }
 
   function addSuccessModal() {
-    var popupSuccess = document.querySelector('.popup-successfully');
     popupSuccess.style.display = "block";
 
-    var onPopupEscPress = function (evt) {
+    function onPopupEscPress (evt) {
       isEscPressSucces(evt, closePopupSuccessfully);
     };
 
-    popupSuccess.addEventListener('click', closePopupSuccessfully);
-    document.addEventListener('keydown', onPopupEscPress);
-  };
+    function closePopupSuccessfully () {
+      popupSuccess.style.display = "none";
 
-  function addErrorModal(message) {
-
-    var popupSuccess = document.querySelector('.popup-successfully');
-    var popupText = document.querySelector('.popup-successfully__text');
-
-    popupSuccess.style.display = "block";
-
-    popupText.textContent = message;
-
-    var onPopupEscPress = function (evt) {
-      isEscPress(evt, closePopupSuccessfully);
+      document.removeEventListener("keydown", onPopupEscPress);
+      popupSuccess.removeEventListener("click", closePopupSuccessfully);
     };
 
-    popupSuccess.addEventListener('click', closePopupSuccessfully);
-    document.addEventListener('keydown', onPopupEscPress);
-  };
+    popupSuccess.addEventListener("click", closePopupSuccessfully);
+    document.addEventListener("keydown", onPopupEscPress);
+  }
 
+  function addErrorModal(message) {
+    popupSuccess.style.display = "block";
+    popupText.textContent = message;
+
+    function onPopupEscPress (evt) {
+      isEscPressSucces(evt, closePopupSuccessfully);
+    };
+
+    function closePopupSuccessfully () {
+      popupSuccess.style.display = "none";
+
+      document.removeEventListener("keydown", onPopupEscPress);
+      popupSuccess.removeEventListener("click", closePopupSuccessfully);
+    };
+
+    popupSuccess.addEventListener("click", closePopupSuccessfully);
+    document.addEventListener("keydown", onPopupEscPress);
+  }
 
 })();
